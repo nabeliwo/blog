@@ -1,0 +1,100 @@
+.textlink { transition: color .2s; }
+.textlink--default { color: #222; }
+.textlink--primary { color: #4090bf; }
+.textlink:hover { color: #68cccd; }
+
+.header {
+  padding: 100px 0;
+  background-color: #fff;
+  background-repeat: repeat;
+  background-image: -webkit-linear-gradient( transparent 95%, #ccc 50%, #ccc),
+                    -webkit-linear-gradient( 0deg, transparent 95%, #ccc 50%, #ccc );
+  background-size: 10px 10px;
+}
+
+.main { padding: 60px 20px; }
+.contents {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.post-list__item {
+  padding: 60px 0;
+}
+.post__title {
+  margin: 0 auto 10px;
+  font-weight: normal;
+  font-size: 2.8rem;
+}
+.post__category {
+  margin: 0 auto 10px;
+  font-size: 0;
+}
+.post__category__item {
+  font-size: 1.4rem;
+}
+.post__category__item:not(:first-child)::before {
+  display: inline-block;
+  margin: 0 5px;
+  content: "/";
+}
+.post__date {
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.footer {
+  background-color: #fff;
+  background-repeat: repeat;
+  background-image: -webkit-linear-gradient( transparent 95%, #ccc 50%, #ccc),
+                    -webkit-linear-gradient( 0deg, transparent 95%, #ccc 50%, #ccc );
+  background-size: 10px 10px;
+}
+.footer__inner {
+  padding: 60px 0;
+  text-align: center;
+}
+.footer__thumb {
+  overflow: hidden;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 30px;
+  transform: rotate(-45deg);
+}
+.footer__thumb__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #dae3e8;
+  transform: rotate(45deg);
+}
+.footer__social {
+  padding: 0;
+  font-size: 0;
+}
+.footer__social > li {
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.footer__copy {
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  text-align: center;
+}
+
+.social {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+}
