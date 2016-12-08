@@ -1,0 +1,23 @@
+{
+  "name": "blog.nabeliwo.me",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "watch:css": "postcss -c ./.postcssrc.json -m -w",
+    "build:css": "postcss -c ./.postcssrc.json"
+  },
+  "author": "nabeliwo",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "csswring": "^5.1.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-import": "^9.0.0",
+    "postcss-nesting": "^2.3.1",
+    "postcss-sorting": "^1.7.0"
+  },
+  "dependencies": {}
+}

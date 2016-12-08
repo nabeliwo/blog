@@ -1,0 +1,21 @@
+.c-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--color-black-light);
+  fill: var(--color-black-light);
+  transition: all .3s;
+}
+
+@media (--mobile) {
+  .header { height: 170px; }
+}
+
+@media (--pc) {
+  .c-social:hover {
+    border: 1px solid var(--color-secondary);
+    fill: var(--color-secondary);
+  }
+}

@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 262px;
+}
+.header__title { display: none; }
+
+@media (--mobile) {
+  .header { height: 170px; }
+}

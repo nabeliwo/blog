@@ -1,0 +1,196 @@
+.c-logo {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  text-align: center;
+}
+.c-logo__item {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: top;
+
+  &::before, 
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+  }
+
+  &--n {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-black);
+    border-bottom: 0;
+
+    &::before {
+      width: 1px;
+      height: 10px;
+      top: -11px;
+      left: -1px;
+      background-color: var(--color-black);
+    }
+  }
+  &--a {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-black);
+
+    &::before {
+      width: 1px;
+      height: 10px;
+      top: -11px;
+      right: -1px;
+      background-color: var(--color-black);
+    }
+    &::after {
+      width: 25px;
+      height: 1px;
+      top: -11px;
+      right: -1px;
+      background-color: var(--color-black);
+    }
+  }
+  &--b {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-black);
+
+    &::before {
+      width: 1px;
+      height: 10px;
+      top: -11px;
+      left: -1px;
+      background-color: var(--color-black);
+    }
+  }
+  &--e {
+    width: 50px;
+    height: 40px;
+    border: 1px solid var(--color-black);
+
+    &::before {
+      width: 1px;
+      height: 10px;
+      bottom: -11px;
+      left: -1px;
+      background-color: var(--color-black);
+    }
+    &::after {
+      width: 50px;
+      height: 1px;
+      bottom: -11px;
+      left: 0;
+      background-color: var(--color-black);
+    }
+  }
+  &--l {
+    width: 1px;
+    height: 50px;
+    background-color: var(--color-black);
+  }
+  &--i {
+    width: 1px;
+    height: 50px;
+
+    &::before {
+      width: 1px;
+      height: 10px;
+      top: 0;
+      left: 0;
+      background-color: var(--color-black);
+    }
+    &::after {
+      width: 1px;
+      height: 30px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-black);
+    }
+  }
+  &--w {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-black);
+    border-top: 0;
+
+    &::before {
+      width: 1px;
+      height: 25px;
+      bottom: 0;
+      left: 50%;
+      background-color: var(--color-black);
+    }
+  }
+  &--o {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-black);
+  }
+  &--dot {
+    width: 1px;
+    height: 50px;
+
+    &::before {
+      width: 1px;
+      height: 10px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-black);
+    }
+  }
+  &--m {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-black);
+    border-bottom: 0;
+
+    &::before {
+      width: 1px;
+      height: 10px;
+      top: -11px;
+      left: -1px;
+      background-color: var(--color-black);
+    }
+    &::after {
+      width: 1px;
+      height: 50px;
+      top: -1px;
+      left: 50%;
+      background-color: var(--color-black);
+    }
+  }
+}
+
+@media (--mobile) {
+  .c-logo {
+    width: 262px;
+    text-align: left;
+  }
+  .c-logo__item { margin: 5px; }
+
+  .c-logo:active .c-logo__item { border-color: var(--color-secondary); }
+  .c-logo:active .c-logo__item--l,
+  .c-logo:active .c-logo__item::before, 
+  .c-logo:active .c-logo__item::after { background-color: var(--color-secondary); }
+}
+
+@media (--pc) {
+  .c-logo:hover .c-logo__item:nth-child(1)  { animation: jump .2s ease-in-out .00s; }
+  .c-logo:hover .c-logo__item:nth-child(2)  { animation: jump .2s ease-in-out .05s; }
+  .c-logo:hover .c-logo__item:nth-child(3)  { animation: jump .2s ease-in-out .10s; }
+  .c-logo:hover .c-logo__item:nth-child(4)  { animation: jump .2s ease-in-out .15s; }
+  .c-logo:hover .c-logo__item:nth-child(5)  { animation: jump .2s ease-in-out .20s; }
+  .c-logo:hover .c-logo__item:nth-child(6)  { animation: jump .2s ease-in-out .25s; }
+  .c-logo:hover .c-logo__item:nth-child(7)  { animation: jump .2s ease-in-out .30s; }
+  .c-logo:hover .c-logo__item:nth-child(8)  { animation: jump .2s ease-in-out .35s; }
+  .c-logo:hover .c-logo__item:nth-child(9)  { animation: jump .2s ease-in-out .40s; }
+  .c-logo:hover .c-logo__item:nth-child(10) { animation: jump .2s ease-in-out .45s; }
+  .c-logo:hover .c-logo__item:nth-child(11) { animation: jump .2s ease-in-out .50s; }
+
+  @keyframes jump {
+    0%   { top: 0; }
+    50%  { top: -10px; }
+    100% { top: 0; }
+  }
+}

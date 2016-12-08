@@ -1,0 +1,13 @@
+{
+  "title": "nabeliwo.me",
+  "baseurl": "https://blog.nabeliwo.me/",
+  "permalinks": {
+    "post": "/:year/:slug/"
+  },
+  "metaDataFormat": "json",
+
+  "params": {
+    "socialbase": "nabeliwo",
+    "facebook": "hirokiwatanabe19"
+  }
+}

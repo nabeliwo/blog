@@ -1,0 +1,19 @@
+<footer class="footer c-graph">
+  <div class="footer__inner">
+    <div class="footer__box">
+      <div class="c-octagon footer__icon">
+        <div class="c-octagon__inner">
+          {{ partial "svg/icon.html" . }}
+        </div>
+      </div>
+
+      <ul class="footer__list">
+        <li><a class="c-social" href="https://www.facebook.com/{{ .Site.Params.facebook }}">{{ partial "svg/facebook.html" }}</a></li>
+        <li><a class="c-social" href="https://twitter.com/{{ .Site.Params.socialbase }}">{{ partial "svg/twitter.html" }}</a></li>
+        <li><a class="c-social" href="https://github.com/{{ .Site.Params.socialbase }}">{{ partial "svg/github.html" }}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer__copy">&copy; {{ .Site.LastChange.Format "2016" }} {{ .Site.Title }}</p>
+</footer>

@@ -1,0 +1,2 @@
+@custom-media --mobile (max-width: 768px);
+@custom-media --pc (min-width: 769px);
