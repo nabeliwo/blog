@@ -11,3 +11,14 @@
 
   &:hover { color: var(--color-secondary); }
 }
+
+@media (--pc) {
+  .c-textlink {
+    transition: color .2s;
+    &:hover { color: var(--color-secondary); }
+  }
+}
+
+@media (--mobile) {
+  .c-textlink:active { color: var(--color-secondary); }
+}
