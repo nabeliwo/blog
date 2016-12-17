@@ -1,6 +1,6 @@
 {
   "title": "nabeliwo.me",
-  "baseurl": "https://blog.nabeliwo.me/",
+  "baseurl": "http://blog.nabeliwo.me/",
   "permalinks": {
     "post": "/:year/:slug/"
   },
