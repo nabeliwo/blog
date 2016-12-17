@@ -5,5 +5,5 @@
 }
 
 @media (--mobile) {
-  .container { padding: 40px 10px; }
+  .container { padding: 40px 15px; }
 }
