@@ -15,6 +15,7 @@ pids
 logs
 results
 build
+public
 
 # dist
 bundle.css

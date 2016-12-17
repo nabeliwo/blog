@@ -3,7 +3,11 @@
 
 <div class="container">
   <div class="container__inner">
-    
+    <div class="p-top__posts">
+      {{ range where .Paginator.Pages "Section" "post" }}
+        <div class="p-top__posts__item">{{ .Render "li" }}</div>
+      {{ end }}
+    </div>
   </div>
 </div>
 

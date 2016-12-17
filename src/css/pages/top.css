@@ -1,0 +1,3 @@
+.p-top__posts {
+  & > .p-top__posts__item { padding: 60px 0; }
+}

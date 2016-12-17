@@ -4,6 +4,8 @@
   "permalinks": {
     "post": "/:year/:slug/"
   },
+  "paginate": 10,
+  "paginatePath": "page",
   "metaDataFormat": "json",
 
   "params": {

@@ -1,0 +1,13 @@
+.c-textlink {
+  transition: color .2s;
+
+  &--default {
+    color: var(--color-black-light);
+  }
+
+  &--primary {
+    color: var(--color-primary);
+  }
+
+  &:hover { color: var(--color-secondary); }
+}

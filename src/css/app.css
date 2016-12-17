@@ -30,3 +30,13 @@
 @import "./components/logo";
 @import "./components/octagon";
 @import "./components/social";
+@import "./components/article";
+@import "./components/textlink";
+@import "./components/post";
+
+/*-------------------------------------//
+//  Pages
+//-------------------------------------*/
+
+@import "./pages/top";
+@import "./pages/single";

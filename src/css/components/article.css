@@ -1,0 +1,23 @@
+.c-article { text-align: center; }
+.c-article__title {
+  margin: 0 auto 10px;
+  font-weight: normal;
+  font-size: 2.8rem;
+}
+.c-article__category {
+  margin: 0 auto 10px;
+  font-size: 0;
+}
+.c-article__category__item {
+  font-size: 1.4rem;
+
+  &:not(:first-child)::before {
+    display: inline-block;
+    margin: 0 5px;
+    content: "/";
+  }
+}
+.c-article__date {
+  margin: 0 auto;
+  font-size: 1.2rem;
+}

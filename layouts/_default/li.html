@@ -1,0 +1,15 @@
+<article class="c-article">
+  <h2 class="c-article__title">
+    <a class="c-textlink c-textlink--default" href="{{ .Permalink }}">{{ .Title }}</a>
+  </h2>
+
+  <div class="c-article__category">
+    {{ range .Params.categories }}
+      <span class="c-article__category__item"><a class="c-textlink c-textlink--primary" href="/categories/{{ . }}">{{ . }}</a></span>
+    {{ end }}
+  </div>
+
+  <p class="c-article__date">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+  </p>
+</article>
