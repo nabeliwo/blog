@@ -2,7 +2,7 @@
 title: "この記事は文字のデザインチェック用です"
 slug: "design-check"
 date: "2016-12-13"
-categories: ["design", "HTML", "CSS"]
+tags: ["design", "HTML", "CSS"]
 image: ""
 ---
 

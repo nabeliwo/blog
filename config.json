@@ -2,7 +2,7 @@
   "title": "nabeliwo.me",
   "baseurl": "http://blog.nabeliwo.me/",
   "permalinks": {
-    "post": "/:year/:slug/"
+    "post": "/:year/:month/:slug/"
   },
   "paginate": 10,
   "paginatePath": "page",

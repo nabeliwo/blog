@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "watch:css": "postcss -c ./.postcssrc.json -m -w",
-    "build:css": "postcss -c ./.postcssrc.json"
+    "build:css": "postcss -c ./.postcssrc.json",
+    "clean": "rm -rf public"
   },
   "author": "nabeliwo",
   "license": "MIT",
