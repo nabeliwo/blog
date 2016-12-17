@@ -3,3 +3,7 @@
   max-width: var(--size-container-width);
   margin: 0 auto;
 }
+
+@media (--mobile) {
+  .container { padding: 40px 10px; }
+}
