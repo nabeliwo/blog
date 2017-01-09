@@ -1,6 +1,7 @@
 <ul class="c-share">
+  <!--href="http://www.facebook.com/sharer.php?u=http://mayonakahimitsukosakuin.com/diary/since_april_2016/&amp;t=4月からの方針をいろいろ決めたりツール選定したりした" target="new">-->
   <li class="c-share__item">
-    <a class="c-share__icon is-facebook" href="http://www.facebook.com/share.php?u={{ $.Scratch.Get "pageTitle" | safeURL }}%0a{{ .Permalink | safeURL }}" onclick="window.open(encodeURI(decodeURI(this.href)), 'fbwindow', 'width=550, height=450,personalbar=0,toolbar=0,scrollbars=1,resizable=1'); return false;">
+    <a class="c-share__icon is-facebook" href="http://www.facebook.com/share.php?u={{ .Permalink | safeURL }}&t={{ $.Scratch.Get "pageTitle"  | safeURL }}" target="new">
       <span class="c-share__icon__text">{{ partial "svg/facebook.html" }}</span>
     </a>
   </li>
