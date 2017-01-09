@@ -1,4 +1,3 @@
-languageCode = "jp"
 title = "blog.nabeliwo.me"
 baseurl = "http://blog.nabeliwo.me/"
 
@@ -7,9 +6,10 @@ post = "/:year/:month/:slug/"
 
 paginate = 10
 paginatePath = "page"
-metaDataFormat = "json"
 
 # More options
 [params]
+author = "nabeliwo"
+description = "blog.nabeliwo.meは@nabeliwoの技術だったりポエムだったりのブログです。三角が好きです。"
 socialbase = "nabeliwo"
 facebook = "hirokiwatanabe19"

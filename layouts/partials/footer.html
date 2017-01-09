@@ -11,6 +11,8 @@
         <li><a class="c-social" href="https://www.facebook.com/{{ .Site.Params.facebook }}">{{ partial "svg/facebook.html" }}</a></li>
         <li><a class="c-social" href="https://twitter.com/{{ .Site.Params.socialbase }}">{{ partial "svg/twitter.html" }}</a></li>
         <li><a class="c-social" href="https://github.com/{{ .Site.Params.socialbase }}">{{ partial "svg/github.html" }}</a></li>
+        <li><a class="c-social" href="http://cloud.feedly.com/#subscription%2Ffeed%2F{{ .Site.RSSLink }}">{{ partial "svg/feedly.html" }}</a></li>
+        <li><a class="c-social" href="{{ .Site.RSSLink }}">{{ partial "svg/rss.html" }}</a></li>
       </ul>
     </div>
   </div>

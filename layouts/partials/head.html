@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  {{ if .IsHome }}
+    {{ $.Scratch.Add "pageTitle" .Site.Title }}{{ $.Scratch.Add "pageTitle" " | " }}{{ $.Scratch.Add "pageTitle" .Site.Params.description }}
+  {{ else }}
+    {{ $.Scratch.Add "pageTitle" .Title }}{{ $.Scratch.Add "pageTitle" " | " }}{{ $.Scratch.Add "pageTitle" .Site.Title }}
+  {{ end }}
+
   <meta charset="utf-8">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+
+  {{ if eq .URL "404.html" }}
+  <meta name="robots" content="noindex,nofollow">
+  {{ end }}
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ $.Scratch.Get "pageTitle" }}">
+  <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/social.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+  <meta name="twitter:title" content="{{ $.Scratch.Get "pageTitle" }}">
+  <meta name="twitter:site" content="@{{ .Site.Params.socialbase }}">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/social.png">
+
+  <link rel="canonical" href="{{ .Permalink }}">
   <link rel="icon" type="image/vnd.microsoft.icon" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="alternate" href="{{ .RSSlink }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <link rel="stylesheet" href="/css/bundle.css">
-  <title>{{ .Site.Title }}</title>
+  <title>{{ $.Scratch.Get "pageTitle" }}</title>
 </head>
 <body>
