@@ -1,9 +1,10 @@
----
-title: "ブログをはてぶからHugoに移しました"
-slug: "start-hugo"
-date: "2016-12-18"
-tags: ["diary"]
----
++++
+date        = "2016-12-18"
+title       = "ブログをはてぶからHugoに移しました"
+description = "ブログをHugoで作り直したのでそのご報告記事です。"
+tags        = ["diary"]
+slug        = "start-hugo"
++++
 
 これまでの僕のブログ事情というと、
 

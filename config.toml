@@ -1,0 +1,15 @@
+languageCode = "jp"
+title = "blog.nabeliwo.me"
+baseurl = "http://blog.nabeliwo.me/"
+
+[permalinks]
+post = "/:year/:month/:slug/"
+
+paginate = 10
+paginatePath = "page"
+metaDataFormat = "json"
+
+# More options
+[params]
+socialbase = "nabeliwo"
+facebook = "hirokiwatanabe19"
