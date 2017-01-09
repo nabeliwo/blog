@@ -33,6 +33,7 @@
 @import "./components/article";
 @import "./components/textlink";
 @import "./components/post";
+@import "./components/share";
 
 /*-------------------------------------//
 //  Pages
