@@ -1,15 +1,15 @@
 title = "blog.nabeliwo.me"
 baseurl = "http://blog.nabeliwo.me/"
-
-[permalinks]
-post = "/:year/:month/:slug/"
-
 paginate = 10
 paginatePath = "page"
+enableEmoji = true
+
+[permalinks]
+  post = "/:year/:month/:slug/"
 
 # More options
 [params]
-author = "nabeliwo"
-description = "blog.nabeliwo.meは@nabeliwoの技術だったりポエムだったりのブログです。三角が好きです。"
-socialbase = "nabeliwo"
-facebook = "hirokiwatanabe19"
+  author = "nabeliwo"
+  description = "blog.nabeliwo.meは@nabeliwoの技術だったりポエムだったりのブログです。三角が好きです。"
+  socialbase = "nabeliwo"
+  facebook = "hirokiwatanabe19"
