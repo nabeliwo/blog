@@ -2,7 +2,7 @@
 date        = "2017-02-05"
 title       = "ゲームをやりこみたいのである"
 description = "ゲームに対する姿勢を変えたいという話"
-tags        = ["diary"]
+tags        = ["diary", "game"]
 slug        = "game"
 +++
 
