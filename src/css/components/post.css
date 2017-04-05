@@ -86,6 +86,23 @@
     border: none;
     border-top: 1px dashed var(--color-gray-dark);
   }
+
+  & table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & th,
+    & td {
+      padding: 6px 13px;
+      border: 1px solid #d9d9d9;
+    }
+
+    & > tbody > tr {
+      border-top: 1px solid #d9d9d9;
+
+      &:nth-child(even) { background-color: rgba(0, 0, 0, .03); }
+    }
+  }
 }
 
 @media (--pc) {
@@ -122,5 +139,10 @@
     & a:active { color: var(--color-secondary); }
 
     & hr { width: 40%; }
+
+    & table {
+      font-size: 1.0rem;
+      table-layout: fixed;
+    }
   }
 }
