@@ -9,10 +9,6 @@
   transition: all .3s;
 }
 
-@media (--mobile) {
-  .header { height: 170px; }
-}
-
 @media (--pc) {
   .c-social:hover {
     border: 1px solid var(--color-secondary);
