@@ -1,5 +1,5 @@
-title = "blog.nabeliwo.me"
-baseurl = "http://blog.nabeliwo.me/"
+title = "nabeliwonote"
+baseurl = "https://blog.nabeliwo.me/"
 paginate = 10
 paginatePath = "page"
 enableEmoji = true
@@ -10,6 +10,6 @@ enableEmoji = true
 # More options
 [params]
   author = "nabeliwo"
-  description = "blog.nabeliwo.meは@nabeliwoの技術だったりポエムだったりのブログです。三角が好きです。"
+  description = "nabeliwonoteは@nabeliwoによる技術系ポエムです。"
   socialbase = "nabeliwo"
   facebook = "hirokiwatanabe19"

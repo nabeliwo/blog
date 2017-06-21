@@ -3,22 +3,22 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "watch:css": "postcss -c ./.postcssrc.json -m -w",
-    "build:css": "postcss -c ./.postcssrc.json",
+    "watch:css": "postcss -c ./postcss.config.js -m -w",
+    "build:css": "postcss -c ./postcss.config.js",
     "clean": "rm -rf public"
   },
   "author": "nabeliwo",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "csswring": "^5.1.0",
-    "postcss-cli": "^2.6.0",
-    "postcss-custom-media": "^5.0.1",
-    "postcss-custom-properties": "^5.0.1",
-    "postcss-flexbugs-fixes": "^2.0.0",
-    "postcss-import": "^9.0.0",
-    "postcss-nesting": "^2.3.1",
-    "postcss-sorting": "^1.7.0"
+    "autoprefixer": "^7.1.1",
+    "csswring": "^6.0.0",
+    "postcss-cli": "^4.1.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.0.1",
+    "postcss-flexbugs-fixes": "^3.0.0",
+    "postcss-import": "^10.0.0",
+    "postcss-nesting": "^4.0.1",
+    "postcss-sorting": "^3.0.0"
   },
   "dependencies": {}
 }
