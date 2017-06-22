@@ -1,21 +1,16 @@
 module.exports = {
-  input: "./src/css/app.css",
-  output: "./static/css/bundle.css",
-  use: [
-    "postcss-import",
-    "postcss-custom-properties",
-    "postcss-custom-media",
-    "postcss-nesting",
-
-    "autoprefixer",
-    "postcss-flexbugs-fixes",
-    "postcss-sorting",
-    "csswring"
-  ],
-  autoprefixer: {
-    browsers: [
-      "last 2 versions",
-      "safari >= 7"
-    ]
-  }
+  plugins: [
+    require('postcss-import')(),
+    require('postcss-custom-properties')(),
+    require('postcss-custom-media')(),
+    require('autoprefixer')({
+      browsers: [
+        "last 2 versions",
+        "safari >= 7"
+      ]
+    }),
+    require('postcss-flexbugs-fixes')(),
+    require('postcss-sorting')(),
+    require('csswring')(),
+  ]
 };
