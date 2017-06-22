@@ -1,6 +1,6 @@
 title = "nabeliwonote"
 baseurl = "https://blog.nabeliwo.me/"
-paginate = 10
+paginate = 20
 paginatePath = "page"
 enableEmoji = true
 
