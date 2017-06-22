@@ -4,6 +4,7 @@ title       = "絵文字対応しました"
 description = "このブログで絵文字が使えるようになったよ、というご報告"
 tags        = ["diary"]
 slug        = "emoji"
+type        = "post"
 +++
 
 絵文字対応しました:beer: めでたい:smile::tada:

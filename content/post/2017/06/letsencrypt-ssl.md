@@ -4,6 +4,7 @@ title       = "ようやくLet's Encryptでhttpsになった"
 description = "随分時間がかかってしまったけれどやっとhttpsになった"
 tags        = ["letsencrypt"]
 slug        = "letsencrypt-ssl"
+type        = "post"
 +++
 
 このブログをたててから長い間放置していたhttps対応なわけですが、本日ようやく重い腰をあげて対応しました。

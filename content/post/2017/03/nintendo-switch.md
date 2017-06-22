@@ -4,6 +4,7 @@ title       = "Nintendo Switchゲットだぜ"
 description = "ついに任天堂から新ハード「Nintendo Switch」が発売されましたね。"
 tags        = ["diary"]
 slug        = "nintendo-switch"
+type        = "post"
 +++
 
 はい。  

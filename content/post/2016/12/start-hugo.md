@@ -4,6 +4,7 @@ title       = "ブログをはてぶからHugoに移しました"
 description = "ブログをHugoで作り直したのでそのご報告記事です。"
 tags        = ["diary"]
 slug        = "start-hugo"
+type        = "post"
 +++
 
 これまでの僕のブログ事情というと、

@@ -1,0 +1,5 @@
+.p-post__items > .p-post__item { padding: 60px 0; }
+
+@media (--mobile) {
+  .p-post__items > .p-post__item { padding: 40px 0; }
+}
