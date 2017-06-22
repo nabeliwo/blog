@@ -1,20 +1,9 @@
-.c-textlink {
-  transition: color .2s;
-
-  &--default {
-    color: var(--color-black-light);
-  }
-
-  &--primary {
-    color: var(--color-primary);
-  }
-}
+.c-textlink--default { color: var(--color-black-light); }
+.c-textlink--primary { color: var(--color-primary); }
 
 @media (--pc) {
-  .c-textlink {
-    transition: color .2s;
-    &:hover { color: var(--color-secondary); }
-  }
+  .c-textlink { transition: color .2s; }
+  .c-textlink:hover { color: var(--color-secondary); }
 }
 
 @media (--mobile) {

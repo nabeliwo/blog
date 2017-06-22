@@ -8,14 +8,11 @@
   margin: 0 auto 10px;
   font-size: 0;
 }
-.c-article__category__item {
-  font-size: 1.4rem;
-
-  &:not(:first-child)::before {
-    display: inline-block;
-    margin: 0 5px;
-    content: "/";
-  }
+.c-article__category__item { font-size: 1.4rem; }
+.c-article__category__item:not(:first-child)::before {
+  display: inline-block;
+  margin: 0 5px;
+  content: "/";
 }
 .c-article__date {
   margin: 0 auto;

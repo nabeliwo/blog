@@ -1,9 +1,5 @@
-.p-top__posts {
-  & > .p-top__posts__item { padding: 60px 0; }
-}
+.p-top__posts > .p-top__posts__item { padding: 60px 0; }
 
 @media (--mobile) {
-  .p-top__posts {
-    & > .p-top__posts__item { padding: 40px 0; }
-  }
+  .p-top__posts > .p-top__posts__item { padding: 40px 0; }
 }

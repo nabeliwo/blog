@@ -6,10 +6,17 @@
   height: 35px;
   border: 1px solid var(--color-black-light);
   fill: var(--color-black-light);
-  transition: all .3s;
+}
+
+@media (--mobile) {
+  .c-social:active {
+    border: 1px solid var(--color-secondary);
+    fill: var(--color-secondary);
+  }
 }
 
 @media (--pc) {
+  .c-social { transition: all .3s; }
   .c-social:hover {
     border: 1px solid var(--color-secondary);
     fill: var(--color-secondary);
