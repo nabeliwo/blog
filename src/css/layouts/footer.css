@@ -1,4 +1,7 @@
-.footer { text-align: center; }
+.footer {
+  padding-bottom: 90px;
+  text-align: center;
+}
 .footer__inner {
   display: flex;
   align-items: center;

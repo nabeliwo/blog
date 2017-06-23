@@ -40,7 +40,7 @@
 }
 
 @media (--mobile) {
-  .c-share__icon:active::before { filter: brightness(120%); }
+  .c-share__icon.is-touch::before { filter: brightness(120%); }
 }
 @media (--pc) {
   .c-share__icon::before { transition: all .3s; }

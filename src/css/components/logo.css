@@ -205,31 +205,31 @@
   }
   .c-logo__item { margin: 10px 5px; }
 
-  .c-logo:active .c-logo__item--n1 { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--n1::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--n1::after { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--a { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--a::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--a::after { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--b { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--b::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--b::after { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--e { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--e::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--e::after { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--l::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--i::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--i::after { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--w { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--w::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--o { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--o::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--o::after { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--n2 { border-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--n2::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--n2::after { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--t::before { background-color: var(--color-secondary); }
-  .c-logo:active .c-logo__item--t::after { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--n1 { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--n1::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--n1::after { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--a { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--a::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--a::after { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--b { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--b::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--b::after { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--e { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--e::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--e::after { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--l::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--i::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--i::after { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--w { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--w::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--o { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--o::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--o::after { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--n2 { border-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--n2::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--n2::after { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--t::before { background-color: var(--color-secondary); }
+  .c-logo.is-touch .c-logo__item--t::after { background-color: var(--color-secondary); }
 }
 
 @media (--pc) {

@@ -120,7 +120,7 @@
   .c-post ul,
   .c-post ol { padding: 0 0 0 20px; }
 
-  .c-post a:active { color: var(--color-secondary); }
+  .c-post a.is-touch { color: var(--color-secondary); }
 
   .c-post hr { width: 40%; }
 

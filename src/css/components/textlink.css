@@ -7,5 +7,5 @@
 }
 
 @media (--mobile) {
-  .c-textlink:active { color: var(--color-secondary); }
+  .c-textlink.is-touch { color: var(--color-secondary); }
 }
