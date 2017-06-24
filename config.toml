@@ -1,5 +1,5 @@
 title = "nabeliwonote"
-baseurl = "//blog.nabeliwo.me/"
+baseurl = "https://blog.nabeliwo.me/"
 canonifyurls = true
 paginate = 20
 paginatePath = "page"
