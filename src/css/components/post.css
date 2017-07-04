@@ -95,6 +95,11 @@
 .c-post > tbody > tr { border-top: 1px solid #d9d9d9; }
 .c-post > tbody > tr:nth-child(even) { background-color: rgba(0, 0, 0, .03); }
 
+.c-post code {
+  padding: .08em .3em;
+  background-color: #f0f0f0;
+}
+
 @media (--pc) {
   .c-post a { transition: color .2s; }
   .c-post a:hover { color: var(--color-secondary); }

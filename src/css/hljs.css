@@ -2,7 +2,7 @@
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 
-.hljs {
+.c-post .hljs {
   display: block;
   overflow-x: auto;
   background: #2a3c4a;
@@ -13,46 +13,46 @@
 }
 
 /* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote { color: #999999; }
+.c-post .hljs-comment,
+.c-post .hljs-quote { color: #999999; }
 
 /* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion { color: #f2777a; }
+.c-post .hljs-variable,
+.c-post .hljs-template-variable,
+.c-post .hljs-tag,
+.c-post .hljs-name,
+.c-post .hljs-selector-id,
+.c-post .hljs-selector-class,
+.c-post .hljs-regexp,
+.c-post .hljs-deletion { color: #f2777a; }
 
 /* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link { color: #f99157; }
+.c-post .hljs-number,
+.c-post .hljs-built_in,
+.c-post .hljs-builtin-name,
+.c-post .hljs-literal,
+.c-post .hljs-type,
+.c-post .hljs-params,
+.c-post .hljs-meta,
+.c-post .hljs-link { color: #f99157; }
 
 /* Tomorrow Yellow */
-.hljs-attribute { color: #ffcc66; }
+.c-post .hljs-attribute { color: #ffcc66; }
 
 /* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition { color: #99cc99; }
+.c-post .hljs-string,
+.c-post .hljs-symbol,
+.c-post .hljs-bullet,
+.c-post .hljs-addition { color: #99cc99; }
 
 /* Tomorrow Blue */
-.hljs-title,
-.hljs-section { color: #6699cc; }
+.c-post .hljs-title,
+.c-post .hljs-section { color: #6699cc; }
 
 /* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag { color: #cc99cc; }
+.c-post .hljs-keyword,
+.c-post .hljs-selector-tag { color: #cc99cc; }
 
-.hljs-emphasis { font-style: italic; }
+.c-post .hljs-emphasis { font-style: italic; }
 
-.hljs-strong { font-weight: bold; }
+.c-post .hljs-strong { font-weight: bold; }
