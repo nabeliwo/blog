@@ -2,7 +2,7 @@
 date        = "2017-06-24"
 title       = "このブログのホスト先をさくらVPSからnetlifyに移行しました"
 description = "ちょっとだけ移行に手間取ったのでメモしときます"
-tags        = ["netlify"]
+tags        = ["tech", "netlify"]
 slug        = "move-host-to-netlify"
 type        = "post"
 +++

@@ -2,7 +2,7 @@
 date        = "2017-06-06"
 title       = "ようやくLet's Encryptでhttpsになった"
 description = "随分時間がかかってしまったけれどやっとhttpsになった"
-tags        = ["letsencrypt"]
+tags        = ["tech", "letsencrypt"]
 slug        = "letsencrypt-ssl"
 type        = "post"
 +++

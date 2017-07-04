@@ -2,7 +2,7 @@
 date        = "2017-01-11"
 title       = "絵文字対応しました"
 description = "このブログで絵文字が使えるようになったよ、というご報告"
-tags        = ["diary"]
+tags        = ["tech", "diary"]
 slug        = "emoji"
 type        = "post"
 +++
