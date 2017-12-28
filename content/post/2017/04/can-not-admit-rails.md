@@ -2,7 +2,7 @@
 date        = "2017-04-18"
 title       = "Railsをどうしても認められないこの気持ち、恋かな"
 description = "Railsを仕事で触るようになってそろそろ1ヶ月…所感です。"
-tags        = ["tech", "rubyonrails", "ruby"]
+tags        = ["tech", "ruby-on-rails", "ruby"]
 slug        = "can-not-admit-rails"
 +++
 
