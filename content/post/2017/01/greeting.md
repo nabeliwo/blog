@@ -4,7 +4,6 @@ title       = "2017年になりましたのでご挨拶"
 description = "2017年1回目の記事ですが特に内容のある話はしません。"
 tags        = ["diary"]
 slug        = "greeting"
-type        = "post"
 +++
 
 明けましたね。  

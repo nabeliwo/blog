@@ -4,7 +4,6 @@ title       = "PrettierをEslintと連携してコード自動整形かつVisual
 description = "Prettierがとても便利なのでVisual Studio Codeから使えるようにした。"
 tags        = ["tech", "javascript", "prettier", "eslint", "visual-studio-code"]
 slug        = "prettier-eslint-vscode"
-type        = "post"
 +++
 
 [prettier](https://github.com/prettier/prettier) は JavaScript のコードフォーマッター。  

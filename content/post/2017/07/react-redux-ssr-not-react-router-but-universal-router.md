@@ -4,7 +4,6 @@ title       = "react-routerではなくuniversal-routerでReact + ReduxのSSR + 
 description = "react-routerからuniversal-routerに移行したくなったのでそのときの行程メモ。"
 tags        = ["tech", "javascript", "react", "redux", "universal-router"]
 slug        = "react-redux-ssr-not-react-router-but-universal-router"
-type        = "post"
 +++
 
 [react-router](https://github.com/ReactTraining/react-router)がv4になったことで既存のアプリケーションが完全に壊れて困っちゃった人。いると思います。  

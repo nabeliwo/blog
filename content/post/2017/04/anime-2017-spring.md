@@ -4,7 +4,6 @@ title       = "2017春アニメの期待値を並べてみた"
 description = "2017年の春アニメの見るやつリストと期待値表"
 tags        = ["anime"]
 slug        = "anime-2017-spring"
-type        = "post"
 +++
 
 2017年春アニメの自分的な期待値をまとめてみました。  

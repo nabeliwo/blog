@@ -4,7 +4,6 @@ title       = "Railsをどうしても認められないこの気持ち、恋か
 description = "Railsを仕事で触るようになってそろそろ1ヶ月…所感です。"
 tags        = ["tech", "rubyonrails", "ruby"]
 slug        = "can-not-admit-rails"
-type        = "post"
 +++
 
 JavaScript一筋のフロントエンドエンジニアだった僕がサーバーサイドにコンバートしてRailsを触るようになってもう少しで1ヶ月が経ちます。  

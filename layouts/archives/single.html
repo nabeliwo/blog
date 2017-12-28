@@ -9,11 +9,13 @@
       </header>
 
       <section class="c-archives">
-        {{ range where .Site.Pages "Params.type" "post" }}
-          <div class="c-archives__item">
-            <p class="c-archives__time"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></p>
-            <h3 class="c-archives__title"><a class="c-textlink c-textlink--primary js-touch" href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          </div>
+        {{ range where .Site.Pages "Section" "post" }}
+          {{ if ne .Title "Posts" }}
+            <div class="c-archives__item">
+              <p class="c-archives__time"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></p>
+              <h3 class="c-archives__title"><a class="c-textlink c-textlink--primary js-touch" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            </div>
+          {{ end}}
         {{ end }}
       </section>
     </article>

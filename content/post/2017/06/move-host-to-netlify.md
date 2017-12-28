@@ -4,7 +4,6 @@ title       = "このブログのホスト先をさくらVPSからnetlifyに移�
 description = "ちょっとだけ移行に手間取ったのでメモしときます"
 tags        = ["tech", "netlify"]
 slug        = "move-host-to-netlify"
-type        = "post"
 +++
 
 このブログはさくらVPSでホストしていたのですが今話題の[netlify](https://www.netlify.com/)に移行したのでそのときのメモ。
