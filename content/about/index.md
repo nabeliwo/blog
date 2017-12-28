@@ -14,5 +14,4 @@ nabeliwonote とは [@nabeilwo](https://twitter.com/nabeliwo) によるブログ
 
 ## nabeliwo is 誰
 
-うぇっぶふろんとえんどえんじにゃー:cat:  
-詳しくは [nabeliwo.me](https://nabeliwo.me) を見てね。
+うぇっぶふろんとえんどえんじにゃー:cat:
