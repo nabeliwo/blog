@@ -1,5 +1,4 @@
 import arrayFrom from './polyfill/array.from';
-import { hoverStart, hoverEnd } from './helper/event';
 import Navi from './navi';
 
 arrayFrom();
