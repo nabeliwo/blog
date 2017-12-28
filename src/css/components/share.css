@@ -28,7 +28,6 @@
 .c-share__icon.is-twitter::before { background-color: #55acee; }
 .c-share__icon.is-hatena::before { background-color: #008fde; }
 .c-share__icon.is-pocket::before { background-color: #ef4456; }
-.c-share__icon.is-feedly::before { background-color: #6cc655; }
 .c-share__icon__text {
   position: relative;
   display: flex;
