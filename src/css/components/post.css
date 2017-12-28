@@ -48,6 +48,7 @@
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
+  box-shadow: rgba(0, 0, 0, .12) 0 1px 6px, rgba(0, 0, 0, .12) 0 1px 4px;
 }
 
 .c-post ul,
