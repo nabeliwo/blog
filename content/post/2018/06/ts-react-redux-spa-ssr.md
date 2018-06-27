@@ -30,22 +30,25 @@ slug        = "ts-react-redux-spa-ssr"
 - step1: ただの React 環境を作る
 - step2: TypeScript にする
 
+ちなみにこのプロジェクトは Node v10.5.0 の環境で動かしています。
+
 ## この記事のゴール
 
 以下の要件を満たすボイラープレートを作成することがこの記事のゴール地点です。
 
 - 開発要件
   - 言語は TypeScript である
-  - Hot Module Replacement ができる
-  - linter, formatter がある
-  - テストが書ける
-  - storybook でコンポーネントの確認ができる
+  - Webpack で Hot Module Replacement ができる
+  - ESLint, Prettier で lint, format ができる
+  - Jest, Enzyme でテストが書ける
+  - Storybook でコンポーネントの確認ができる
 - アプリケーション要件
   - React, React Router, Redux で作られた SPA である
   - バックエンドは Express サーバーであり、 React の SSR に対応している
   - メールアドレスログイン、 Twitter ログインの機能を持つ
-  - ゲストユーザーのアクセス制限機能を持つ
+  - ゲストユーザーに対する特定ページへのアクセス制限機能を持つ
 
+このボイラープレートを取ってくればすぐにアプリケーションのロジックを書くことができるわけですね。  
 最終的なボイラープレートはこのリポジトリに置いてあるので好きに使ってください。  
 TODO: リポジトリのブランチ指定でリンク貼る。
 
@@ -57,6 +60,19 @@ TODO: リポジトリのブランチ指定でリンク貼る。
 まずは普通に React コンポーネントをただ表示するだけのものを作ります。  
 作るんですがそれを表示するために express サーバーを立てます。別にただの index.html を置くだけでも良いっちゃ良いんですが、 express サーバー立てるのもめっちゃ簡単なので後々のことを考えてここでサーバー立てちゃいます。
 
+まず依存ライブラリを全て入れちゃいます。  
+このプロジェクトは yarn を使うのでまず最初に入れて、その後 dependencies と devDependencies を入れます。
+
+```
+$ npm i -g yarn
+$ yarn add
+```
+
+必要なライブラリはこちら。
+
+**dependencies**
+
+**devDependencies**
 
 
 ## step2: TypeScript にする
