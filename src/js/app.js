@@ -26,3 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
     box: '.js-navi-box'
   });
 });
+
+console.log('hogehoge')
