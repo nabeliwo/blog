@@ -1,0 +1,15 @@
+{{ if ne .Paginator.TotalPages 1 }}
+<nav class="c-pager">
+  {{ if .Paginator.HasPrev }}
+    <a class="c-pager__item c-page__item--prev js-touch" href="{{ .Paginator.Prev.URL }}">{{ partial "svg/angle-left.html" }}</a>
+  {{ else }}
+    <span class="c-pager__item c-page__item--prev c-pager__item--disabled">{{ partial "svg/minus.html" }}</span>
+  {{ end }}
+  <span class="c-pager__number">{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</span>
+  {{ if .Paginator.HasNext }}
+    <a class="c-pager__item c-page__item--next js-touch" href="{{ .Paginator.Next.URL }}">{{ partial "svg/angle-right.html" }}</a>
+  {{ else }}
+    <span class="c-pager__item c-page__item--next c-pager__item--disabled">{{ partial "svg/minus.html" }}</span>
+  {{ end }}
+</nav>
+{{ end }}

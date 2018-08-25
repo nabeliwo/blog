@@ -37,6 +37,7 @@
 @import "./components/archives";
 @import "./components/navi";
 @import "./components/tags";
+@import "./components/pager";
 
 /*-------------------------------------//
 //  Pages
