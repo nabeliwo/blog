@@ -1,6 +1,6 @@
 +++
-date        = "2018-12-05"
-title       = "プラコラ最強！即割バブル最強！んぎもぢいいいいい！"
+date        = "2018-12-07"
+title       = "プラコラんぎもぢいいいいい！！！！！！"
 description = "プライムシューターコラボは最強だという話"
 tags        = ["game", "splatoon"]
 slug        = "splatoon-prime-shooter-collabo"
