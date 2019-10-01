@@ -1,35 +1,9 @@
 {
-  "name": "blog.nabeliwo.me",
-  "private": true,
+  "name": "nabeliwo-blog",
   "version": "1.0.0",
-  "scripts": {
-    "deploy": "npm-run-all clean build deploy:*",
-    "deploy:hugo": "hugo",
-    "clean": "rm -rf public",
-    "dev": "npm-run-all -p dev:*",
-    "build": "npm-run-all -p build:*",
-    "dev:js": "watchify -d ./src/js/app.js -t babelify -o ./static/js/bundle.js",
-    "build:js": "browserify ./src/js/app.js -t babelify -t uglifyify -o ./static/js/bundle.js",
-    "dev:css": "postcss ./src/css/app.css -o ./static/css/bundle.css -c ./postcss.config.js -w",
-    "build:css": "postcss ./src/css/app.css -o ./static/css/bundle.css -c ./postcss.config.js"
-  },
   "author": "nabeliwo",
   "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^7.3.0",
-    "browserify": "^14.4.0",
-    "csswring": "^6.0.0",
-    "npm-run-all": "^4.0.2",
-    "postcss-cli": "^4.1.0",
-    "postcss-custom-media": "^6.0.0",
-    "postcss-custom-properties": "^6.0.1",
-    "postcss-flexbugs-fixes": "^3.0.0",
-    "postcss-import": "^10.0.0",
-    "postcss-sorting": "^3.0.0",
-    "uglifyify": "^4.0.1",
-    "watchify": "^3.9.0"
-  },
+  "scripts": {},
+  "devDependencies": {},
   "dependencies": {}
 }
