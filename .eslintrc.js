@@ -21,4 +21,7 @@ module.exports = {
   globals: {
     process: 'readonly',
   },
+  rules: {
+    'react/prop-types': 'off',
+  }
 }
