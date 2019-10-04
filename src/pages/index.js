@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import Layout from '../components/Layout'
+
 export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -10,7 +12,9 @@ export const query = graphql`
           id
           frontmatter {
             title
+            description
             date
+            tags
           }
           fields {
             slug
@@ -22,18 +26,26 @@ export const query = graphql`
 `
 
 const Index = ({ data }) => (
-  <div>
+  <Layout>
     <List>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <li key={node.id}>
           <Link to={node.fields.slug}>
             <Title>{node.frontmatter.title}</Title>
-            <Date>{node.frontmatter.date}</Date>
           </Link>
+          <div>
+            {node.frontmatter.tags.map(tag => (
+              <Link key={tag} to={`/tags/${tag}`}>
+                #{tag}
+              </Link>
+            ))}
+          </div>
+          <Date>{node.frontmatter.date}</Date>
+          <p>{node.frontmatter.description}</p>
         </li>
       ))}
     </List>
-  </div>
+  </Layout>
 )
 
 export default Index
