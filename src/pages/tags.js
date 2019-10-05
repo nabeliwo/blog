@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import Head from '../components/Head'
 import Layout from '../components/Layout'
 
 export const pageQuery = graphql`
@@ -16,17 +17,20 @@ export const pageQuery = graphql`
 `
 
 const Tags = ({ data }) => (
-  <Layout>
-    <List>
-      {data.allMarkdownRemark.group.map(tag => (
-        <li key={tag.fieldValue}>
-          <Link to={`/tags/${tag.fieldValue}/`}>
-            {tag.fieldValue} ({tag.totalCount})
-          </Link>
-        </li>
-      ))}
-    </List>
-  </Layout>
+  <>
+    <Head title="タグ一覧" description="ラリルレロのタグ一覧です。" slug="/tags/" />
+    <Layout>
+      <List>
+        {data.allMarkdownRemark.group.map(tag => (
+          <li key={tag.fieldValue}>
+            <Link to={`/tags/${tag.fieldValue}/`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          </li>
+        ))}
+      </List>
+    </Layout>
+  </>
 )
 
 export default Tags

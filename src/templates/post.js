@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
 
+import Head from '../components/Head'
 import Layout from '../components/Layout'
 
 export const query = graphql`
@@ -10,26 +10,31 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
         date
+        image
+      }
+      fields {
+        slug
       }
     }
   }
 `
 
 const Post = ({ data }) => {
-  const post = data.markdownRemark
+  const { frontmatter, html, fields } = data.markdownRemark
+  const { title, description, date, image } = frontmatter
 
   return (
-    <Layout>
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </Layout>
+    <>
+      <Head title={title} description={description} image={image} slug={fields.slug} isBlogPost />
+      <Layout>
+        <h1>{title}</h1>
+        <p>{date}</p>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </Layout>
+    </>
   )
 }
 
 export default Post
-
-const Wrapper = styled.div`
-  color: blue;
-`

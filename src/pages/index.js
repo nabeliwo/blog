@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import Head from '../components/Head'
 import Layout from '../components/Layout'
 
 export const query = graphql`
@@ -26,26 +27,29 @@ export const query = graphql`
 `
 
 const Index = ({ data }) => (
-  <Layout>
-    <List>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <li key={node.id}>
-          <Link to={node.fields.slug}>
-            <Title>{node.frontmatter.title}</Title>
-          </Link>
-          <div>
-            {node.frontmatter.tags.map(tag => (
-              <Link key={tag} to={`/tags/${tag}`}>
-                #{tag}
-              </Link>
-            ))}
-          </div>
-          <Date>{node.frontmatter.date}</Date>
-          <p>{node.frontmatter.description}</p>
-        </li>
-      ))}
-    </List>
-  </Layout>
+  <>
+    <Head />
+    <Layout>
+      <List>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <li key={node.id}>
+            <Link to={node.fields.slug}>
+              <Title>{node.frontmatter.title}</Title>
+            </Link>
+            <div>
+              {node.frontmatter.tags.map(tag => (
+                <Link key={tag} to={`/tags/${tag}`}>
+                  #{tag}
+                </Link>
+              ))}
+            </div>
+            <Date>{node.frontmatter.date}</Date>
+            <p>{node.frontmatter.description}</p>
+          </li>
+        ))}
+      </List>
+    </Layout>
+  </>
 )
 
 export default Index

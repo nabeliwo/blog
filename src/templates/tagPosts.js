@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import Head from '../components/Head'
 import Layout from '../components/Layout'
 
 export const pageQuery = graphql`
@@ -30,38 +31,41 @@ export const pageQuery = graphql`
   }
 `
 
-const Tags = ({ pageContext, data }) => {
+const TagPosts = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`
 
   return (
-    <Layout>
-      <h1>{tagHeader}</h1>
-      <List>
-        {edges.map(({ node }) => (
-          <li key={node.id}>
-            <Link to={node.fields.slug}>
-              <Title>{node.frontmatter.title}</Title>
-            </Link>
-            <div>
-              {node.frontmatter.tags.map(tag => (
-                <Link key={tag} to={`/tags/${tag}`}>
-                  #{tag}
-                </Link>
-              ))}
-            </div>
-            <Date>{node.frontmatter.date}</Date>
-            <p>{node.frontmatter.description}</p>
-          </li>
-        ))}
-      </List>
-      <Link to="/tags">All tags</Link>
-    </Layout>
+    <>
+      <Head title={`#${tag} の記事一覧`} description={`ラリルレロの #${tag} タグの記事一覧です。`} slug={`/tags/${tag}`} />
+      <Layout>
+        <h1>{tagHeader}</h1>
+        <List>
+          {edges.map(({ node }) => (
+            <li key={node.id}>
+              <Link to={node.fields.slug}>
+                <Title>{node.frontmatter.title}</Title>
+              </Link>
+              <div>
+                {node.frontmatter.tags.map(tag => (
+                  <Link key={tag} to={`/tags/${tag}`}>
+                    #{tag}
+                  </Link>
+                ))}
+              </div>
+              <Date>{node.frontmatter.date}</Date>
+              <p>{node.frontmatter.description}</p>
+            </li>
+          ))}
+        </List>
+        <Link to="/tags">All tags</Link>
+      </Layout>
+    </>
   )
 }
 
-export default Tags
+export default TagPosts
 
 const List = styled.ul`
   & > li {
