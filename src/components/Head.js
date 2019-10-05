@@ -12,7 +12,9 @@ const Head = ({ meta = [], isBlogPost = false, title, description, image, slug }
             description
             canonicalUrl
             image
-            social
+            social {
+              twitter
+            }
           }
         }
       }
