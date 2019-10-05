@@ -6,8 +6,8 @@ import Head from '../components/Head'
 import Layout from '../components/Layout'
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, skip: $skip, limit: $limit) {
       edges {
         node {
           id
@@ -26,7 +26,7 @@ export const query = graphql`
   }
 `
 
-const Index = ({ data }) => (
+const Index = ({ data, pageContext }) => (
   <>
     <Head />
     <Layout>
@@ -48,6 +48,9 @@ const Index = ({ data }) => (
           </li>
         ))}
       </List>
+
+      {pageContext.previousPagePath && <Link to={pageContext.previousPagePath}>Previous</Link>}
+      {pageContext.nextPagePath && <Link to={pageContext.nextPagePath}>Next</Link>}
     </Layout>
   </>
 )
