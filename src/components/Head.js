@@ -10,10 +10,12 @@ const Head = ({ meta = [], isBlogPost = false, title, description, image, slug }
           siteMetadata {
             title
             description
-            canonicalUrl
+            siteUrl
             image
             social {
-              twitter
+              twitter {
+                name
+              }
             }
           }
         }
@@ -24,7 +26,7 @@ const Head = ({ meta = [], isBlogPost = false, title, description, image, slug }
       const metaTitle = title ? `${title} | ${siteMetadata.title}` : siteMetadata.title
       const metaDescription = description || siteMetadata.description
       const metaImage = image || siteMetadata.image
-      const metaUrl = slug ? `${siteMetadata.canonicalUrl}${slug}` : siteMetadata.canonicalUrl
+      const metaUrl = slug ? `${siteMetadata.siteUrl}${slug}` : siteMetadata.siteUrl
 
       return (
         <Helmet
@@ -73,7 +75,7 @@ const Head = ({ meta = [], isBlogPost = false, title, description, image, slug }
             },
             {
               name: 'twitter:creator',
-              content: siteMetadata.social.twitter,
+              content: `@${siteMetadata.social.twitter.name}`,
             },
             {
               name: 'twitter:title',

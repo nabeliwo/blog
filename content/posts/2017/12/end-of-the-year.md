@@ -2,7 +2,7 @@
 title: "年末の遊びとスノボと見栄と成長と"
 description: "スノボ行った時に感じたこと。"
 date: "2017-12-30"
-tags: ["dialy", "poem"]
+tags: ["diary", "poem"]
 image: ""
 ---
 
