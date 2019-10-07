@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+import { size } from '../themes'
+import { isPc, isSp } from '../libs/ua'
 
 import Head from '../components/Head'
 import Layout from '../components/Layout'
+import TimeComponent from '../components/Time'
+import TagLink from '../components/TagLink'
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
@@ -30,46 +35,175 @@ const Index = ({ data, pageContext }) => (
   <>
     <Head />
     <Layout>
-      <List>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <li key={node.id}>
-            <Link to={node.fields.slug}>
-              <Title>{node.frontmatter.title}</Title>
-            </Link>
-            <div>
-              {node.frontmatter.tags.map(tag => (
-                <Link key={tag} to={`/tags/${tag}`}>
+      {data.allMarkdownRemark.edges.map(({ node }, i) => (
+        <Article key={node.id} i={i}>
+          <Date>
+            <Time format="YYYY.MM.DD">{node.frontmatter.date}</Time>
+          </Date>
+          <Title>
+            <TitleLink to={node.fields.slug}>{node.frontmatter.title}</TitleLink>
+          </Title>
+          <Tags>
+            {node.frontmatter.tags.map((tag, i) => (
+              <li key={tag}>
+                <TagLink to={`/tags/${tag}`} color={i % 2 === 0 ? 'pink' : 'blue'}>
                   #{tag}
-                </Link>
-              ))}
-            </div>
-            <Date>{node.frontmatter.date}</Date>
-            <p>{node.frontmatter.description}</p>
-          </li>
-        ))}
-      </List>
+                </TagLink>
+              </li>
+            ))}
+          </Tags>
+          <Description>{node.frontmatter.description}</Description>
+        </Article>
+      ))}
 
-      {pageContext.previousPagePath && <Link to={pageContext.previousPagePath}>Previous</Link>}
-      {pageContext.nextPagePath && <Link to={pageContext.nextPagePath}>Next</Link>}
+      <Pagination>
+        {pageContext.previousPagePath && (
+          <PaginationItem to={pageContext.previousPagePath} className="prev">
+            マエ
+          </PaginationItem>
+        )}
+        {pageContext.nextPagePath && (
+          <PaginationItem to={pageContext.nextPagePath} className="next">
+            ツギ
+          </PaginationItem>
+        )}
+      </Pagination>
     </Layout>
   </>
 )
 
 export default Index
 
-const List = styled.ul`
-  & > li {
-    list-style: none;
-
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
-  }
-`
-const Title = styled.h2`
-  margin: 0 0 10px;
-  font-size: bold;
+const Article = styled.article`
+  padding: ${size.space.XXL} 0;
+  text-align: center;
 `
 const Date = styled.p`
-  margin: 0;
+  position: relative;
+  display: inline-block;
+  margin-bottom: ${size.space.XS};
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: #333;
+    transform: translateX(-50%);
+    content: '';
+  }
+`
+const Time = styled(TimeComponent)`
+  position: relative;
+  padding: 0 ${size.space.XXS};
+  background-color: #fff;
+  color: #444;
+  font-family: gagagaga, sans-serif;
+  font-size: ${size.font.M};
+`
+const Title = styled.p`
+  margin-bottom: ${size.space.XS};
+`
+const TitleLink = styled(Link)`
+  font-size: ${size.font.XL};
+  line-height: 1.4;
+  ${isPc &&
+    css`
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: #20bffc;
+      }
+    `}
+
+  ${isSp &&
+    css`
+      &:active {
+        color: #20bffc;
+      }
+    `}
+`
+const Tags = styled.ul`
+  margin-bottom: ${size.space.XS};
+
+  & > li {
+    display: inline-block;
+    margin: 0.2rem;
+  }
+`
+const Description = styled.p`
+  font-size: ${size.font.S};
+  line-height: 1.3;
+`
+const Pagination = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: ${size.space.XXL} 0;
+`
+const PaginationItem = styled(Link)`
+  position: relative;
+  display: block;
+  margin: 0 ${size.space.XXS};
+  color: #333;
+  font-family: gagagaga, sans-serif;
+  font-size: ${size.font.L};
+
+  &.prev::before,
+  &.next::before {
+    position: absolute;
+    top: 50%;
+    border: 8px solid transparent;
+    transform: translateY(-50%);
+    content: '';
+  }
+  &.prev {
+    padding-left: 20px;
+
+    &::before {
+      left: 0;
+      border-right: 20px solid #333;
+      border-left: 0;
+    }
+  }
+  &.next {
+    padding-right: 20px;
+
+    &::before {
+      right: -8px;
+      border-right: 0;
+      border-left: 20px solid #333;
+    }
+  }
+
+  ${isPc &&
+    css`
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: #20bffc;
+
+        &.prev::before {
+          border-right-color: #20bffc;
+        }
+        &.next::before {
+          border-left-color: #20bffc;
+        }
+      }
+    `}
+
+  ${isSp &&
+    css`
+      &:active {
+        color: #20bffc;
+
+        &.prev::before {
+          border-right-color: #20bffc;
+        }
+        &.next::before {
+          border-left-color: #20bffc;
+        }
+      }
+    `}
 `

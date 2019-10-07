@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import styled from 'styled-components'
+import { graphql, StaticQuery } from 'gatsby'
+import styled, { css } from 'styled-components'
 
-import { size, palette } from '../themes'
+import { size } from '../themes'
+import { isPc, isSp } from '../libs/ua'
 
 import TwitterIcon from './icons/Twitter'
 import InstagramIcon from './icons/Instagram'
@@ -81,10 +82,10 @@ const Sidebar = () => (
             <li>
               <Title>タグ</Title>
               <Tags>
-                {tags.map((tag, i) => (
+                {tags.map(tag => (
                   <li key={tag.fieldValue}>
-                    <TagLink to={`/tags/${tag.fieldValue}`} color={i % 2 !== 0 ? 'blue' : ''}>
-                      # {tag.fieldValue} ({tag.totalCount})
+                    <TagLink to={`/tags/${tag.fieldValue}`}>
+                      {tag.fieldValue} ({tag.totalCount})
                     </TagLink>
                   </li>
                 ))}
@@ -111,6 +112,7 @@ const Title = styled.p`
   position: relative;
   margin-bottom: ${size.space.XS};
   padding-bottom: ${size.space.XXS};
+  color: #444;
   font-family: 'gagagaga', sans-serif;
   font-size: ${size.font.XL};
 
@@ -120,7 +122,7 @@ const Title = styled.p`
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, ${palette.MAIN_PINK}, ${palette.MAIN_LIGHT_BLUE} 100%);
+    background: linear-gradient(to right, #fc1ebd, #20bffc 100%);
     content: '';
   }
 `
@@ -155,20 +157,33 @@ const Anchor = styled.a`
     transition: fill 0.2s ease-in-out;
   }
 
-  @media screen and (min-width: ${size.media.PC_MIN}) {
-    transition: transform 0.2s ease-in-out;
+  ${isPc &&
+    css`
+      transition: transform 0.2s ease-in-out;
 
-    &:hover {
-      transform: scale(0.8);
+      &:hover {
+        transform: scale(0.8);
 
-      svg {
-        fill: ${palette.MAIN_LIGHT_BLUE};
+        svg {
+          fill: #20bffc;
+        }
       }
-    }
-  }
+    `}
+
+  ${isSp &&
+    css`
+      &:active {
+        transform: scale(0.8);
+
+        svg {
+          fill: #20bffc;
+        }
+      }
+    `}
 `
 const Tags = styled.ul`
   & > li {
     display: inline-block;
+    margin: 0.2rem;
   }
 `

@@ -14,7 +14,7 @@ const Header = () => (
 export default Header
 
 const Wrapper = styled.header`
-  padding: 60px 0 100px;
+  padding: 100px 0 80px;
 `
 const Logo = styled(Link)`
   position: relative;

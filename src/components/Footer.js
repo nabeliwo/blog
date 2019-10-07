@@ -1,22 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { size, palette } from '../themes'
+import { size } from '../themes'
 
 const Footer = () => (
   <Wrapper>
-    <Copy>© 2019 ラリルレロ</Copy>
+    <Copy>© 2019</Copy>
+    <Title>ラリルレロ</Title>
   </Wrapper>
 )
 
 export default Footer
 
 const Wrapper = styled.footer`
-  background: linear-gradient(to right, ${palette.MAIN_PINK}, ${palette.MAIN_LIGHT_BLUE} 100%);
-`
-const Copy = styled.p`
-  font-size: ${size.font.S};
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #fc1ebd, #20bffc 100%);
   color: #fff;
   line-height: 40px;
+`
+const Copy = styled.p`
+  margin-right: 0.4rem;
+  font-size: ${size.font.S};
+`
+const Title = styled.span`
+  font-family: gagagaga, sans-serif;
+  font-size: ${size.font.M};
 `

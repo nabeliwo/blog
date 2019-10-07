@@ -15,12 +15,12 @@ const Style = createGlobalStyle`
   body {
     @font-face {
       font-family: 'gagagaga';
-      src: url('/font/gagagaga.ttf') format('opentype');
+      src: url('/font/gagagaga.otf') format('opentype');
     }
 
     color: #333;
-    word-wrap: break-word;
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, sans-serif;
+    word-wrap: break-word;
   }
   a {
     color: inherit;
