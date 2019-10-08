@@ -33,10 +33,35 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: '@raae/gatsby-remark-oembed',
+            options: {
+              usePrefix: true,
+              providers: {
+                include: ['Instagram'],
+                settings: {
+                  Instagram: {
+                    hidecaption: true,
+                    maxwidth: 500,
+                  },
+                },
+              },
+            },
+          },
+          {
             resolve: 'gatsby-remark-embed-youtube',
             options: {
               width: 560,
               height: 315,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: 'hoge',
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
             },
           },
           'gatsby-remark-responsive-iframe',

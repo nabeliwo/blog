@@ -93,13 +93,13 @@ const Time = styled(TimeComponent)`
     font-size: ${size.font.S};
   }
 `
-const Title = styled.p`
+const Title = styled.h1`
   margin-bottom: ${size.space.XS};
   font-size: ${size.font.XL};
   line-height: 1.4;
 
   @media all and (max-width: ${size.media.SP_MAX}) {
-    font-size: ${size.font.L};
+    font-size: 24px;
   }
 `
 const Tags = styled.ul`
