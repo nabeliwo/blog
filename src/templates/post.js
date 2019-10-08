@@ -65,6 +65,7 @@ const Post = ({ data }) => {
                 </li>
               ))}
             </Tags>
+            {image && <KeyVisual src={image} alt={title} />}
           </ArticleHead>
           <PostHTML html={html} />
           <Share>
@@ -123,8 +124,12 @@ const Post = ({ data }) => {
 export default Post
 
 const ArticleHead = styled.div`
-  margin-bottom: ${size.space.XXL};
+  margin-bottom: calc(${size.space.XXL} + ${size.space.M});
   text-align: center;
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    margin-bottom: calc(${size.space.XXL} + ${size.space.S});
+  }
 `
 const Date = styled.p`
   position: relative;
@@ -167,6 +172,21 @@ const Tags = styled.ul`
   & > li {
     display: inline-block;
     margin: 0.2rem;
+  }
+`
+const KeyVisual = styled.img`
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 600px;
+  margin: ${size.space.XXL} auto 0;
+  vertical-align: top;
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    max-width: calc(100% + ${size.space.M});
+    max-height: auto;
+    margin: ${size.space.S} -${size.space.XS} 0;
   }
 `
 const Share = styled.ul`
