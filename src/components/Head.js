@@ -91,6 +91,12 @@ const Head = ({ meta = [], isBlogPost = false, title, description, image, slug }
             },
           ].concat(meta)}
           title={metaTitle}
+          link={[
+            {
+              rel: 'shortcut icon',
+              href: '/icons/favicon.ico',
+            },
+          ]}
         />
       )
     }}
