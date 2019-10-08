@@ -9,8 +9,6 @@ const PostHTML = ({ html }) => <Wrapper dangerouslySetInnerHTML={{ __html: html 
 export default PostHTML
 
 const Wrapper = styled.main`
-  margin-bottom: ${size.space.XXL};
-
   h2 {
     position: relative;
     margin: calc(${size.space.XXL} + ${size.space.XXL}) 0 ${size.space.M};
