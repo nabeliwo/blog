@@ -20,6 +20,6 @@ export const font = {
 }
 
 export const media = {
-  PC_MIN: '835px',
-  SP_MAX: '834px',
+  PC_MIN: '769px',
+  SP_MAX: '768px',
 }

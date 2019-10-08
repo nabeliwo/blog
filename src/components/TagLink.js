@@ -15,10 +15,10 @@ export default TagLink
 
 const Wrapper = styled(Link)`
   display: inline-block;
-  padding: 0.2rem 0.4rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 3px;
   font-size: ${size.font.S};
-  color: #333;
+  color: #222;
 
   &.pink {
     background-color: #fc1ebd;
@@ -26,6 +26,11 @@ const Wrapper = styled(Link)`
 
   &.blue {
     background-color: #20bffc;
+  }
+
+  &.white {
+    background-color: #fff;
+    color: #9473dd;
   }
 
   ${isPc &&

@@ -77,6 +77,10 @@ export default Index
 const Article = styled.article`
   padding: ${size.space.XXL} 0;
   text-align: center;
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    padding: ${size.space.M} 0;
+  }
 `
 const Date = styled.p`
   position: relative;
@@ -101,6 +105,10 @@ const Time = styled(TimeComponent)`
   color: #444;
   font-family: gagagaga, sans-serif;
   font-size: ${size.font.M};
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    font-size: ${size.font.S};
+  }
 `
 const Title = styled.p`
   margin-bottom: ${size.space.XS};
@@ -108,6 +116,11 @@ const Title = styled.p`
 const TitleLink = styled(Link)`
   font-size: ${size.font.XL};
   line-height: 1.4;
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    font-size: ${size.font.L};
+  }
+
   ${isPc &&
     css`
       transition: color 0.2s ease-in-out;
@@ -135,20 +148,32 @@ const Tags = styled.ul`
 const Description = styled.p`
   font-size: ${size.font.S};
   line-height: 1.3;
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    font-size: ${size.font.XS};
+  }
 `
 const Pagination = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: ${size.space.XXL} 0;
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    padding: ${size.space.M} 0;
+  }
 `
 const PaginationItem = styled(Link)`
   position: relative;
   display: block;
   margin: 0 ${size.space.XXS};
-  color: #333;
+  color: #444;
   font-family: gagagaga, sans-serif;
   font-size: ${size.font.L};
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    font-size: ${size.font.M};
+  }
 
   &.prev::before,
   &.next::before {
@@ -157,14 +182,22 @@ const PaginationItem = styled(Link)`
     border: 8px solid transparent;
     transform: translateY(-50%);
     content: '';
+
+    @media all and (max-width: ${size.media.SP_MAX}) {
+      border-width: 6px;
+    }
   }
   &.prev {
     padding-left: 20px;
 
     &::before {
       left: 0;
-      border-right: 20px solid #333;
+      border-right: 20px solid #444;
       border-left: 0;
+
+      @media all and (max-width: ${size.media.SP_MAX}) {
+        border-right-width: 16px;
+      }
     }
   }
   &.next {
@@ -173,7 +206,11 @@ const PaginationItem = styled(Link)`
     &::before {
       right: -8px;
       border-right: 0;
-      border-left: 20px solid #333;
+      border-left: 20px solid #444;
+
+      @media all and (max-width: ${size.media.SP_MAX}) {
+        border-left-width: 16px;
+      }
     }
   }
 

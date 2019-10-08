@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+import { size } from '../themes'
+
 const Header = () => (
   <Wrapper>
     <Logo to="/">
@@ -15,6 +17,10 @@ export default Header
 
 const Wrapper = styled.header`
   padding: 100px 0 80px;
+
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    padding: ${size.space.XXL} 0;
+  }
 `
 const Logo = styled(Link)`
   position: relative;
@@ -23,26 +29,36 @@ const Logo = styled(Link)`
   height: 95px;
   margin: 0 auto;
 
+  @media all and (max-width: ${size.media.SP_MAX}) {
+    width: 300px;
+    height: 48px;
+  }
+
   & > .blue,
   & > .pink {
     position: absolute;
     top: 0;
     transition: left 0.2s ease-in-out;
+
+    @media all and (max-width: ${size.media.SP_MAX}) {
+      width: 300px;
+      height: 48px;
+    }
   }
   & > .blue {
-    left: 3px;
+    left: 2px;
   }
   & > .pink {
-    left: -3px;
+    left: -2px;
     mix-blend-mode: multiply;
   }
 
   &:hover {
     & > .blue {
-      left: -30px;
+      left: -20px;
     }
     & > .pink {
-      left: 30px;
+      left: 20px;
     }
   }
 `
