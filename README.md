@@ -1,5 +1,5 @@
-# blog.nabeliwo.me
+# nabeliwo-blog
 
-[nabeliwo](https://twitter.com/nabeliwo)'s blog, named nabeliwonote.
+[nabeliwo](https://twitter.com/nabeliwo)'s blog, named 'ラリルレロ'.
 
-[https://blog.nabeliwo.me/](https://blog.nabeliwo.me/)
+[https://blog.nabeliwo.com/](https://blog.nabeliwo.com/)

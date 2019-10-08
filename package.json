@@ -1,35 +1,58 @@
 {
-  "name": "blog.nabeliwo.me",
-  "private": true,
+  "name": "nabeliwo-blog",
   "version": "1.0.0",
-  "scripts": {
-    "deploy": "npm-run-all clean build deploy:*",
-    "deploy:hugo": "hugo",
-    "clean": "rm -rf public",
-    "dev": "npm-run-all -p dev:*",
-    "build": "npm-run-all -p build:*",
-    "dev:js": "watchify -d ./src/js/app.js -t babelify -o ./static/js/bundle.js",
-    "build:js": "browserify ./src/js/app.js -t babelify -t uglifyify -o ./static/js/bundle.js",
-    "dev:css": "postcss ./src/css/app.css -o ./static/css/bundle.css -c ./postcss.config.js -w",
-    "build:css": "postcss ./src/css/app.css -o ./static/css/bundle.css -c ./postcss.config.js"
-  },
   "author": "nabeliwo",
   "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^7.3.0",
-    "browserify": "^14.4.0",
-    "csswring": "^6.0.0",
-    "npm-run-all": "^4.0.2",
-    "postcss-cli": "^4.1.0",
-    "postcss-custom-media": "^6.0.0",
-    "postcss-custom-properties": "^6.0.1",
-    "postcss-flexbugs-fixes": "^3.0.0",
-    "postcss-import": "^10.0.0",
-    "postcss-sorting": "^3.0.0",
-    "uglifyify": "^4.0.1",
-    "watchify": "^3.9.0"
+  "engines": {
+    "node": "10.16.3",
+    "yarn": "1.19.0"
   },
-  "dependencies": {}
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "yarn develop",
+    "lint:js": "eslint 'src/**/*.js{,x}'",
+    "lint:style": "stylelint 'src/**/*.js{,x}'",
+    "lint": "run-p lint:*"
+  },
+  "dependencies": {
+    "gatsby": "^2.15.28",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.4.0",
+    "styled-reset": "^4.0.1"
+  },
+  "devDependencies": {
+    "@raae/gatsby-remark-oembed": "^0.1.1",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.15.1",
+    "eslint-plugin-react-hooks": "^2.1.1",
+    "gatsby-awesome-pagination": "^0.3.4",
+    "gatsby-plugin-feed": "^2.3.15",
+    "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-offline": "^3.0.12",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-styled-components": "^3.1.8",
+    "gatsby-plugin-twitter": "^2.1.9",
+    "gatsby-remark-embed-youtube": "^0.0.7",
+    "gatsby-remark-emoji": "^0.0.3",
+    "gatsby-remark-prismjs": "^3.3.17",
+    "gatsby-remark-responsive-iframe": "^2.2.21",
+    "gatsby-source-filesystem": "^2.1.28",
+    "gatsby-transformer-remark": "^2.6.26",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "prismjs": "^1.17.1",
+    "stylelint": "^11.0.0",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
+  }
 }
