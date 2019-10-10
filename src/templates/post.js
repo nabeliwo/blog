@@ -124,11 +124,11 @@ const Post = ({ data }) => {
 export default Post
 
 const ArticleHead = styled.div`
-  margin-bottom: calc(${size.space.XXL} + ${size.space.M});
+  margin: ${size.space.XXL} 0 calc(${size.space.XXL} + ${size.space.XL});
   text-align: center;
 
   @media all and (max-width: ${size.media.SP_MAX}) {
-    margin-bottom: calc(${size.space.XXL} + ${size.space.S});
+    margin: ${size.space.S} 0 calc(${size.space.XXL} + ${size.space.S});
   }
 `
 const Date = styled.p`
@@ -161,6 +161,7 @@ const Time = styled(TimeComponent)`
 `
 const Title = styled.h1`
   margin-bottom: ${size.space.XS};
+  font-weight: bold;
   font-size: ${size.font.XL};
   line-height: 1.4;
 

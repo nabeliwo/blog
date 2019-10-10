@@ -1,6 +1,6 @@
 let ua = ''
 
-if (typeof window !== `undefined`) {
+if (typeof window !== 'undefined') {
   ua = window.navigator.userAgent.toLowerCase()
 }
 
