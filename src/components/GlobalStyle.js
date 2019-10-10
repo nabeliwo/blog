@@ -14,7 +14,7 @@ const Style = createGlobalStyle`
   }
   body {
     @font-face {
-      font-family: 'gagagaga';
+      font-family: gagagaga;
       src: url('/font/gagagaga.otf') format('opentype');
     }
 

@@ -135,7 +135,7 @@ const Title = styled.p`
   display: inline-block;
   margin-bottom: ${size.space.XS};
   padding: 0 ${size.space.XS} ${size.space.XXS};
-  font-family: 'gagagaga', sans-serif;
+  font-family: gagagaga, sans-serif;
   font-size: ${size.font.XL};
 
   @media all and (max-width: ${size.media.SP_MAX}) {
