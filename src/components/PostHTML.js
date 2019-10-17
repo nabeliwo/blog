@@ -110,7 +110,7 @@ const Wrapper = styled.main`
         line-height: 1.8;
 
         &::before {
-          top: 9px;
+          top: 10px;
           left: calc((${size.space.XS} + 2px) * -1);
           width: 8px;
           height: 8px;
@@ -123,7 +123,7 @@ const Wrapper = styled.main`
         li::after {
           position: absolute;
           top: 12px;
-          left: calc(1.5px - ${size.space.S});
+          left: calc(2px - ${size.space.S});
           width: 6px;
           height: 6px;
           border-radius: 2px;
@@ -132,7 +132,7 @@ const Wrapper = styled.main`
           content: '';
 
           @media all and (max-width: ${size.media.SP_MAX}) {
-            top: 11px;
+            top: 12px;
             left: -${size.space.XS};
             width: 4px;
             height: 4px;
