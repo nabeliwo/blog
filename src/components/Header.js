@@ -7,7 +7,7 @@ import { isPc, isSp } from '../libs/ua'
 
 const Header = () => (
   <Wrapper>
-    <Title>
+    <Title to="/">
       <TitleText className="blue">ラリルレロ</TitleText>
       <TitleText className="pink">ラリルレロ</TitleText>
     </Title>
