@@ -177,6 +177,30 @@ const Wrapper = styled.main`
     font-weight: bold;
   }
 
+  table {
+    width: 100%;
+    font-size: ${size.font.S};
+    border-collapse: collapse;
+
+    & > tbody > tr {
+      border-top: 1px solid #d9d9d9;
+
+      &:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+    }
+
+    th,
+    td {
+      padding: ${size.space.XXS};
+      border: 1px solid #d9d9d9;
+    }
+
+    th {
+      font-weight: bold;
+    }
+  }
+
   hr {
     display: block;
     width: 20%;
