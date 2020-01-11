@@ -17,9 +17,11 @@ const Header = () => (
 export default Header
 
 const Wrapper = styled.header`
+  height: 134px;
   padding: 100px 0 80px;
 
   @media all and (max-width: ${size.media.SP_MAX}) {
+    height: 64px;
     padding: ${size.space.XXL} 0;
   }
 `
