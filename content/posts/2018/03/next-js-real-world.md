@@ -2,7 +2,7 @@
 date: "2018-03-21"
 title: "next.js は Real World で使えるのか"
 description: "real world で next.js を使うことができるのか考えてみた。"
-tags: ["javascript", "next"]
+tags: ["javascript", "nextjs"]
 image: ""
 ---
 
