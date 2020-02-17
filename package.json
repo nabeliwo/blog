@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "author": "nabeliwo",
   "license": "MIT",
-  "engines": {
-    "node": "10.17.0",
-    "yarn": "^1.21.1"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -15,6 +11,11 @@
     "lint:js": "eslint 'src/**/*.js{,x}'",
     "lint:style": "stylelint 'src/**/*.js{,x}'",
     "lint": "run-p lint:*"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@raae/gatsby-remark-oembed": "^0.1.1",
@@ -46,13 +47,15 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
     "prismjs": "^1.19.0",
-    "stylelint": "^13.0.0",
+    "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-standard": "^20.0.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.9.0"
+    "stylelint-processor-styled-components": "^1.10.0"
   }
 }
