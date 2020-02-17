@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "author": "nabeliwo",
   "license": "MIT",
-  "engines": {
-    "node": "12.16.0",
-    "yarn": "^1.21.1"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
