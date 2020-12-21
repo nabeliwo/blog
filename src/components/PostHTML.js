@@ -51,7 +51,7 @@ const Wrapper = styled.main`
 
   p {
     margin: ${size.space.M} 0;
-    font-size: 16px;
+    font-size: ${size.font.M};
     line-height: 2;
 
     @media all and (max-width: ${size.media.SP_MAX}) {
@@ -227,6 +227,10 @@ const Wrapper = styled.main`
     @media all and (max-width: ${size.media.SP_MAX}) {
       max-height: 400px;
     }
+  }
+
+  pre {
+    font-size: ${size.font.S};
   }
 
   .twitter-tweet,
