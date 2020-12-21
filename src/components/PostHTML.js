@@ -91,12 +91,12 @@ const Wrapper = styled.main`
 
     li {
       position: relative;
-      font-size: 16px;
+      font-size: ${size.font.M};
       line-height: 2;
 
       &::before {
         position: absolute;
-        top: 10px;
+        top: 12px;
         left: -${size.space.S};
         width: 10px;
         height: 10px;
@@ -110,7 +110,7 @@ const Wrapper = styled.main`
         line-height: 1.8;
 
         &::before {
-          top: 10px;
+          top: 12px;
           left: calc((${size.space.XS} + 2px) * -1);
           width: 8px;
           height: 8px;
@@ -122,7 +122,7 @@ const Wrapper = styled.main`
 
         li::after {
           position: absolute;
-          top: 12px;
+          top: 14px;
           left: calc(2px - ${size.space.S});
           width: 6px;
           height: 6px;
@@ -132,7 +132,7 @@ const Wrapper = styled.main`
           content: '';
 
           @media all and (max-width: ${size.media.SP_MAX}) {
-            top: 12px;
+            top: 14px;
             left: -${size.space.XS};
             width: 4px;
             height: 4px;
@@ -155,7 +155,7 @@ const Wrapper = styled.main`
     }
 
     li {
-      font-size: 16px;
+      font-size: ${size.font.M};
       line-height: 2;
       list-style-type: decimal;
 
