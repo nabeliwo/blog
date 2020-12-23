@@ -5,57 +5,24 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
-    "start": "yarn develop",
-    "lint:js": "eslint 'src/**/*.js{,x}'",
-    "lint:style": "stylelint 'src/**/*.js{,x}'",
-    "lint": "run-p lint:*"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix"
-    ]
+    "lint": "eslint 'src/**/*.ts{,x}'",
+    "format": "eslint --fix 'src/**/*.ts{,x}'"
   },
   "dependencies": {
-    "@raae/gatsby-remark-oembed": "^0.1.1",
-    "gatsby": "^2.20.8",
-    "gatsby-awesome-pagination": "^0.3.5",
-    "gatsby-plugin-feed": "^2.4.1",
-    "gatsby-plugin-manifest": "^2.3.3",
-    "gatsby-plugin-offline": "^3.1.2",
-    "gatsby-plugin-react-helmet": "^3.2.1",
-    "gatsby-plugin-styled-components": "^3.2.1",
-    "gatsby-plugin-twitter": "^2.2.1",
-    "gatsby-remark-embed-youtube": "^0.0.7",
-    "gatsby-remark-emoji": "^0.0.3",
-    "gatsby-remark-prismjs": "^3.4.1",
-    "gatsby-remark-responsive-iframe": "^2.3.1",
-    "gatsby-source-filesystem": "^2.2.2",
-    "gatsby-transformer-remark": "^2.7.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-helmet": "^5.2.1",
-    "styled-components": "^5.0.1",
-    "styled-reset": "^4.1.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
-    "prismjs": "^1.19.0",
-    "stylelint": "^13.2.1",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "@types/react": "^17.0.0",
+    "eslint": "^7.16.0",
+    "eslint-config-smarthr": "^5.0.0",
+    "gatsby": "^2.29.1",
+    "gatsby-plugin-postcss": "^3.4.0",
+    "postcss": "^8.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
   }
 }

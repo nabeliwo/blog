@@ -1,1 +1,2 @@
-import 'prismjs/themes/prism-tomorrow.css'
+import './src/styles/reset.css'
+import './src/styles/base.css'
