@@ -1310,6 +1310,8 @@ type Query_sitePluginArgs = {
   version: Maybe<StringQueryOperatorInput>;
   pluginOptions: Maybe<SitePluginPluginOptionsFilterInput>;
   nodeAPIs: Maybe<StringQueryOperatorInput>;
+  browserAPIs: Maybe<StringQueryOperatorInput>;
+  ssrAPIs: Maybe<StringQueryOperatorInput>;
   pluginFilepath: Maybe<StringQueryOperatorInput>;
   packageJson: Maybe<SitePluginPackageJsonFilterInput>;
 };
@@ -1529,6 +1531,14 @@ enum SiteFieldsEnum {
   buildTime = 'buildTime',
   siteMetadata___title = 'siteMetadata.title',
   siteMetadata___description = 'siteMetadata.description',
+  siteMetadata___siteUrl = 'siteMetadata.siteUrl',
+  siteMetadata___image = 'siteMetadata.image',
+  siteMetadata___social___twitter___name = 'siteMetadata.social.twitter.name',
+  siteMetadata___social___twitter___url = 'siteMetadata.social.twitter.url',
+  siteMetadata___social___instagram___name = 'siteMetadata.social.instagram.name',
+  siteMetadata___social___instagram___url = 'siteMetadata.social.instagram.url',
+  siteMetadata___social___github___name = 'siteMetadata.social.github.name',
+  siteMetadata___social___github___url = 'siteMetadata.social.github.url',
   port = 'port',
   host = 'host',
   polyfill = 'polyfill',
@@ -1862,11 +1872,16 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___plugins___pluginFilepath = 'pluginCreator.pluginOptions.plugins.pluginFilepath',
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___path = 'pluginCreator.pluginOptions.path',
+  pluginCreator___pluginOptions___width = 'pluginCreator.pluginOptions.width',
+  pluginCreator___pluginOptions___height = 'pluginCreator.pluginOptions.height',
+  pluginCreator___pluginOptions___showLineNumbers = 'pluginCreator.pluginOptions.showLineNumbers',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator.pluginOptions.pathCheck',
   pluginCreator___pluginOptions___allExtensions = 'pluginCreator.pluginOptions.allExtensions',
   pluginCreator___pluginOptions___isTSX = 'pluginCreator.pluginOptions.isTSX',
   pluginCreator___pluginOptions___jsxPragma = 'pluginCreator.pluginOptions.jsxPragma',
   pluginCreator___nodeAPIs = 'pluginCreator.nodeAPIs',
+  pluginCreator___browserAPIs = 'pluginCreator.browserAPIs',
+  pluginCreator___ssrAPIs = 'pluginCreator.ssrAPIs',
   pluginCreator___pluginFilepath = 'pluginCreator.pluginFilepath',
   pluginCreator___packageJson___name = 'pluginCreator.packageJson.name',
   pluginCreator___packageJson___description = 'pluginCreator.packageJson.description',
@@ -1928,6 +1943,8 @@ type SitePlugin = Node & {
   readonly version: Maybe<Scalars['String']>;
   readonly pluginOptions: Maybe<SitePluginPluginOptions>;
   readonly nodeAPIs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly browserAPIs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly ssrAPIs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly pluginFilepath: Maybe<Scalars['String']>;
   readonly packageJson: Maybe<SitePluginPackageJson>;
 };
@@ -2054,14 +2071,22 @@ enum SitePluginFieldsEnum {
   pluginOptions___plugins___id = 'pluginOptions.plugins.id',
   pluginOptions___plugins___name = 'pluginOptions.plugins.name',
   pluginOptions___plugins___version = 'pluginOptions.plugins.version',
+  pluginOptions___plugins___pluginOptions___width = 'pluginOptions.plugins.pluginOptions.width',
+  pluginOptions___plugins___pluginOptions___height = 'pluginOptions.plugins.pluginOptions.height',
+  pluginOptions___plugins___pluginOptions___showLineNumbers = 'pluginOptions.plugins.pluginOptions.showLineNumbers',
   pluginOptions___plugins___pluginFilepath = 'pluginOptions.plugins.pluginFilepath',
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___path = 'pluginOptions.path',
+  pluginOptions___width = 'pluginOptions.width',
+  pluginOptions___height = 'pluginOptions.height',
+  pluginOptions___showLineNumbers = 'pluginOptions.showLineNumbers',
   pluginOptions___pathCheck = 'pluginOptions.pathCheck',
   pluginOptions___allExtensions = 'pluginOptions.allExtensions',
   pluginOptions___isTSX = 'pluginOptions.isTSX',
   pluginOptions___jsxPragma = 'pluginOptions.jsxPragma',
   nodeAPIs = 'nodeAPIs',
+  browserAPIs = 'browserAPIs',
+  ssrAPIs = 'ssrAPIs',
   pluginFilepath = 'pluginFilepath',
   packageJson___name = 'packageJson.name',
   packageJson___description = 'packageJson.description',
@@ -2090,6 +2115,8 @@ type SitePluginFilterInput = {
   readonly version: Maybe<StringQueryOperatorInput>;
   readonly pluginOptions: Maybe<SitePluginPluginOptionsFilterInput>;
   readonly nodeAPIs: Maybe<StringQueryOperatorInput>;
+  readonly browserAPIs: Maybe<StringQueryOperatorInput>;
+  readonly ssrAPIs: Maybe<StringQueryOperatorInput>;
   readonly pluginFilepath: Maybe<StringQueryOperatorInput>;
   readonly packageJson: Maybe<SitePluginPackageJsonFilterInput>;
 };
@@ -2173,6 +2200,9 @@ type SitePluginPluginOptions = {
   readonly plugins: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsPlugins>>>;
   readonly name: Maybe<Scalars['String']>;
   readonly path: Maybe<Scalars['String']>;
+  readonly width: Maybe<Scalars['Int']>;
+  readonly height: Maybe<Scalars['Int']>;
+  readonly showLineNumbers: Maybe<Scalars['Boolean']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
   readonly allExtensions: Maybe<Scalars['Boolean']>;
   readonly isTSX: Maybe<Scalars['Boolean']>;
@@ -2183,6 +2213,9 @@ type SitePluginPluginOptionsFilterInput = {
   readonly plugins: Maybe<SitePluginPluginOptionsPluginsFilterListInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
+  readonly width: Maybe<IntQueryOperatorInput>;
+  readonly height: Maybe<IntQueryOperatorInput>;
+  readonly showLineNumbers: Maybe<BooleanQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
   readonly allExtensions: Maybe<BooleanQueryOperatorInput>;
   readonly isTSX: Maybe<BooleanQueryOperatorInput>;
@@ -2194,6 +2227,7 @@ type SitePluginPluginOptionsPlugins = {
   readonly id: Maybe<Scalars['String']>;
   readonly name: Maybe<Scalars['String']>;
   readonly version: Maybe<Scalars['String']>;
+  readonly pluginOptions: Maybe<SitePluginPluginOptionsPluginsPluginOptions>;
   readonly pluginFilepath: Maybe<Scalars['String']>;
 };
 
@@ -2202,11 +2236,24 @@ type SitePluginPluginOptionsPluginsFilterInput = {
   readonly id: Maybe<StringQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly version: Maybe<StringQueryOperatorInput>;
+  readonly pluginOptions: Maybe<SitePluginPluginOptionsPluginsPluginOptionsFilterInput>;
   readonly pluginFilepath: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsPluginsFilterListInput = {
   readonly elemMatch: Maybe<SitePluginPluginOptionsPluginsFilterInput>;
+};
+
+type SitePluginPluginOptionsPluginsPluginOptions = {
+  readonly width: Maybe<Scalars['Int']>;
+  readonly height: Maybe<Scalars['Int']>;
+  readonly showLineNumbers: Maybe<Scalars['Boolean']>;
+};
+
+type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
+  readonly width: Maybe<IntQueryOperatorInput>;
+  readonly height: Maybe<IntQueryOperatorInput>;
+  readonly showLineNumbers: Maybe<BooleanQueryOperatorInput>;
 };
 
 type SitePluginSortInput = {
@@ -2217,11 +2264,59 @@ type SitePluginSortInput = {
 type SiteSiteMetadata = {
   readonly title: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly siteUrl: Maybe<Scalars['String']>;
+  readonly image: Maybe<Scalars['String']>;
+  readonly social: Maybe<SiteSiteMetadataSocial>;
 };
 
 type SiteSiteMetadataFilterInput = {
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
+  readonly siteUrl: Maybe<StringQueryOperatorInput>;
+  readonly image: Maybe<StringQueryOperatorInput>;
+  readonly social: Maybe<SiteSiteMetadataSocialFilterInput>;
+};
+
+type SiteSiteMetadataSocial = {
+  readonly twitter: Maybe<SiteSiteMetadataSocialTwitter>;
+  readonly instagram: Maybe<SiteSiteMetadataSocialInstagram>;
+  readonly github: Maybe<SiteSiteMetadataSocialGithub>;
+};
+
+type SiteSiteMetadataSocialFilterInput = {
+  readonly twitter: Maybe<SiteSiteMetadataSocialTwitterFilterInput>;
+  readonly instagram: Maybe<SiteSiteMetadataSocialInstagramFilterInput>;
+  readonly github: Maybe<SiteSiteMetadataSocialGithubFilterInput>;
+};
+
+type SiteSiteMetadataSocialGithub = {
+  readonly name: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
+};
+
+type SiteSiteMetadataSocialGithubFilterInput = {
+  readonly name: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataSocialInstagram = {
+  readonly name: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
+};
+
+type SiteSiteMetadataSocialInstagramFilterInput = {
+  readonly name: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataSocialTwitter = {
+  readonly name: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
+};
+
+type SiteSiteMetadataSocialTwitterFilterInput = {
+  readonly name: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
 };
 
 type SiteSortInput = {
@@ -2259,9 +2354,9 @@ type PostQueryVariables = Exact<{
 }>;
 
 
-type PostQuery = { readonly markdownRemark: Maybe<(
+type PostQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'siteUrl'>> }>, readonly markdownRemark: Maybe<(
     Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description' | 'date' | 'tags' | 'image'>>, readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>> }
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description' | 'date' | 'image' | 'tags'>>, readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>> }
   )> };
 
 type TagPostsQueryVariables = Exact<{
@@ -2285,6 +2380,9 @@ type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<P
 type HeadQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+      Pick<SiteSiteMetadata, 'title' | 'description' | 'image' | 'siteUrl'>
+      & { readonly social: Maybe<{ readonly twitter: Maybe<Pick<SiteSiteMetadataSocialTwitter, 'name'>> }> }
+    )> }> };
 
 }

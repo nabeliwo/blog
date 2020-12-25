@@ -1,0 +1,11 @@
+.header {
+  padding: 10rem 0;
+  text-align: center;
+}
+.main {
+  max-width: 820px;
+  margin: 0 auto 7rem;
+}
+.logoLink {
+  display: inline-block;
+}

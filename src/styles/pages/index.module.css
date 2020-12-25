@@ -1,4 +1,33 @@
+.wrapper {
+  padding: 5rem 0 15rem;
+}
+.article {
+  margin: 10rem 0;
+  text-align: center;
+}
+.wrapper .article:first-child {
+  margin-top: 0;
+}
+.wrapper .article:last-child {
+  margin-bottom: 0;
+}
+.date {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
 .title {
-  display: flex;
-  font-size: 100px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 2.6rem;
+  line-height: 1.77;
+  letter-spacing: 0.2rem;
+  text-decoration: underline;
+}
+.description {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  line-height: 2.54;
+}
+.paginationWrapper {
+  text-align: center;
 }
