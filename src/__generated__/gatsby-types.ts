@@ -1874,7 +1874,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___path = 'pluginCreator.pluginOptions.path',
   pluginCreator___pluginOptions___width = 'pluginCreator.pluginOptions.width',
   pluginCreator___pluginOptions___height = 'pluginCreator.pluginOptions.height',
-  pluginCreator___pluginOptions___showLineNumbers = 'pluginCreator.pluginOptions.showLineNumbers',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator.pluginOptions.pathCheck',
   pluginCreator___pluginOptions___allExtensions = 'pluginCreator.pluginOptions.allExtensions',
   pluginCreator___pluginOptions___isTSX = 'pluginCreator.pluginOptions.isTSX',
@@ -2073,13 +2072,11 @@ enum SitePluginFieldsEnum {
   pluginOptions___plugins___version = 'pluginOptions.plugins.version',
   pluginOptions___plugins___pluginOptions___width = 'pluginOptions.plugins.pluginOptions.width',
   pluginOptions___plugins___pluginOptions___height = 'pluginOptions.plugins.pluginOptions.height',
-  pluginOptions___plugins___pluginOptions___showLineNumbers = 'pluginOptions.plugins.pluginOptions.showLineNumbers',
   pluginOptions___plugins___pluginFilepath = 'pluginOptions.plugins.pluginFilepath',
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___path = 'pluginOptions.path',
   pluginOptions___width = 'pluginOptions.width',
   pluginOptions___height = 'pluginOptions.height',
-  pluginOptions___showLineNumbers = 'pluginOptions.showLineNumbers',
   pluginOptions___pathCheck = 'pluginOptions.pathCheck',
   pluginOptions___allExtensions = 'pluginOptions.allExtensions',
   pluginOptions___isTSX = 'pluginOptions.isTSX',
@@ -2202,7 +2199,6 @@ type SitePluginPluginOptions = {
   readonly path: Maybe<Scalars['String']>;
   readonly width: Maybe<Scalars['Int']>;
   readonly height: Maybe<Scalars['Int']>;
-  readonly showLineNumbers: Maybe<Scalars['Boolean']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
   readonly allExtensions: Maybe<Scalars['Boolean']>;
   readonly isTSX: Maybe<Scalars['Boolean']>;
@@ -2215,7 +2211,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly path: Maybe<StringQueryOperatorInput>;
   readonly width: Maybe<IntQueryOperatorInput>;
   readonly height: Maybe<IntQueryOperatorInput>;
-  readonly showLineNumbers: Maybe<BooleanQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
   readonly allExtensions: Maybe<BooleanQueryOperatorInput>;
   readonly isTSX: Maybe<BooleanQueryOperatorInput>;
@@ -2247,13 +2242,11 @@ type SitePluginPluginOptionsPluginsFilterListInput = {
 type SitePluginPluginOptionsPluginsPluginOptions = {
   readonly width: Maybe<Scalars['Int']>;
   readonly height: Maybe<Scalars['Int']>;
-  readonly showLineNumbers: Maybe<Scalars['Boolean']>;
 };
 
 type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   readonly width: Maybe<IntQueryOperatorInput>;
   readonly height: Maybe<IntQueryOperatorInput>;
-  readonly showLineNumbers: Maybe<BooleanQueryOperatorInput>;
 };
 
 type SitePluginSortInput = {
@@ -2376,6 +2369,11 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type FooterQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type FooterQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly social: Maybe<{ readonly twitter: Maybe<Pick<SiteSiteMetadataSocialTwitter, 'url'>>, readonly instagram: Maybe<Pick<SiteSiteMetadataSocialInstagram, 'url'>>, readonly github: Maybe<Pick<SiteSiteMetadataSocialGithub, 'url'>> }> }> }> };
 
 type HeadQueryVariables = Exact<{ [key: string]: never; }>;
 

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "typeRoots": [
       "./node_modules/@types",
-      "./src/@types"
+      "./@types"
     ],
     "target": "es2015",
     "jsx": "react",

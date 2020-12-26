@@ -1,7 +1,10 @@
 import React, { FC } from 'react'
+import classNames from 'classnames/bind'
 import { Link } from 'gatsby'
 
 import classes from './Pagination.module.css'
+
+const cx = classNames.bind(classes)
 
 interface Props {
   page: number
@@ -12,7 +15,7 @@ export const PaginationItem: FC<Props> = ({ page, currentPage }) => {
   const humanPage = page + 1
 
   if (page === currentPage) {
-    return <span className={`${classes.item} ${classes.active}`}>{humanPage}</span>
+    return <span className={cx({ item: true, active: true })}>{humanPage}</span>
   }
 
   return (

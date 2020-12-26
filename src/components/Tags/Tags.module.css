@@ -1,11 +1,9 @@
 .list {
-  margin: -0.5rem;
+  margin: -(var(--gutter-xxs));
 }
 .item {
   display: inline-block;
-  margin: 0.5rem;
-  padding: 0.2rem 0.9rem;
-  border: var(--color-black) solid 1px;
-  border-radius: 0.3rem;
-  font-size: 1.3rem;
+  margin: 0 var(--gutter-xxs);
+  font-size: var(--font-size-s);
+  text-decoration: underline;
 }

@@ -1,9 +1,11 @@
 import React, { FC } from 'react'
+import classNames from 'classnames/bind'
 import { Link } from 'gatsby'
-
-import { Icon } from '../Icon'
+import { FaAngleDoubleLeft, FaAngleDoubleRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 import classes from './Pagination.module.css'
+
+const cx = classNames.bind(classes)
 
 type Props = {
   targetPage: number
@@ -12,19 +14,17 @@ type Props = {
   double?: boolean
 }
 
-const getIconProps = (
-  direction: 'prev' | 'next',
-  double: boolean,
-): 'angle-double-left' | 'chevron-left' | 'angle-double-right' | 'chevron-right' => {
-  return direction === 'prev' ? (double ? 'angle-double-left' : 'chevron-left') : double ? 'angle-double-right' : 'chevron-right'
+const getIcon = (direction: 'prev' | 'next', double: boolean) => {
+  return direction === 'prev' ? (double ? FaAngleDoubleLeft : FaChevronLeft) : double ? FaAngleDoubleRight : FaChevronRight
 }
 
 export const PaginationControllerItem: FC<Props> = ({ targetPage, direction, disabled, double = false }) => {
+  const Icon = getIcon(direction, double)
   const humanPage = targetPage + 1
 
   return (
-    <Link to={`/${humanPage === 1 ? '' : humanPage}`} className={`${classes.item} ${disabled ? classes.disabled : ''}`}>
-      <Icon name={getIconProps(direction, double)} color={disabled ? '#c1bdb7' : '#333'} size={13} />
+    <Link to={`/${humanPage === 1 ? '' : humanPage}`} className={cx({ item: true, disabled })}>
+      <Icon size={13} />
     </Link>
   )
 }

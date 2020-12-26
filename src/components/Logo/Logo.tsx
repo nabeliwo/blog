@@ -3,7 +3,7 @@ import React from 'react'
 import classes from './Logo.module.css'
 
 export const Logo = () => (
-  <svg viewBox="0 0 369.77 59.82" width={300} className={classes.logo}>
+  <svg viewBox="0 0 369.77 59.82" width={300} className={classes.wrapper}>
     <title>ナベリヲログ</title>
     <path
       d="M58,16.38,57.54,37.2l-24.66.42L31,59.82,22,59l1.62-21.3L2.16,38.1l1-20.52,22.14-.48,1-13.2,9.48.42-1.08,12.6Z"

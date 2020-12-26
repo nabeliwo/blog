@@ -15,7 +15,7 @@ export const Pagination: FC<Props> = ({ totalPages, currentPage }) => {
 
   const prevPage = (
     <>
-      <li>
+      <li className={classes.prevDouble}>
         <PaginationControllerItem direction="prev" targetPage={0} disabled={currentPage === 0} double />
       </li>
       <li className={classes.prev}>
@@ -37,7 +37,7 @@ export const Pagination: FC<Props> = ({ totalPages, currentPage }) => {
       <li className={classes.next}>
         <PaginationControllerItem direction="next" targetPage={currentPage + 1} disabled={currentPage === totalPages - 1} />
       </li>
-      <li>
+      <li className={classes.nextDouble}>
         <PaginationControllerItem direction="next" targetPage={totalPages - 1} disabled={currentPage === totalPages - 1} double />
       </li>
     </>

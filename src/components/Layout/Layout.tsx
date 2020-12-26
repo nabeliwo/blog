@@ -1,9 +1,8 @@
-import { Link } from 'gatsby'
 import React, { ComponentProps, FC } from 'react'
 
 import { Head } from '../Head'
-import { Logo } from '../Logo'
-
+import { Header } from '../Header'
+import { Footer } from '../Footer'
 import classes from './Layout.module.css'
 
 export const Layout: FC<ComponentProps<typeof Head>> = ({ children, isBlogPost, ...props }) => {
@@ -11,21 +10,11 @@ export const Layout: FC<ComponentProps<typeof Head>> = ({ children, isBlogPost, 
     <>
       <Head {...props} />
 
-      <header className={classes.header}>
-        {isBlogPost ? (
-          <Link to="/" className={classes.logoLink}>
-            <Logo />
-          </Link>
-        ) : (
-          <h1>
-            <Link to="/" className={classes.logoLink}>
-              <Logo />
-            </Link>
-          </h1>
-        )}
-      </header>
+      <Header isBlogPost={isBlogPost} />
 
       <main className={classes.main}>{children}</main>
+
+      <Footer />
     </>
   )
 }

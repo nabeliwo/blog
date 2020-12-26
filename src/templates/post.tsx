@@ -1,12 +1,11 @@
 import React, { FC } from 'react'
-import { Link, PageProps, graphql } from 'gatsby'
+import { PageProps, graphql } from 'gatsby'
 
 import { Layout } from '../components/Layout'
 import { Time } from '../components/Time'
 import { PostHTML } from '../components/PostHTML'
-
-import classes from '../styles/pages/post.module.css'
 import { Tags } from '../components/Tags'
+import classes from '../styles/pages/post.module.css'
 
 export const query = graphql`
   query Post($slug: String!) {

@@ -14,7 +14,7 @@ export const Tags: FC<Props> = ({ tags }) => {
     <div className={classes.list}>
       {tags.map((tag, i) => (
         <Link key={i} to={`/tags/${tag}`} className={classes.item}>
-          #{tag}
+          # {tag}
         </Link>
       ))}
     </div>

@@ -21,6 +21,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-typegen',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-twitter',
     {
@@ -41,12 +42,7 @@ module.exports = {
               height: 315,
             },
           },
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              showLineNumbers: true,
-            },
-          },
+          'gatsby-remark-prismjs',
           'gatsby-remark-responsive-iframe',
           'gatsby-remark-emoji',
         ],

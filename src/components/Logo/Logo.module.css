@@ -1,3 +1,4 @@
-.logo {
-  fill: #333;
+.wrapper {
+  fill: var(--color-primary);
+
 }
