@@ -91,7 +91,7 @@ const Post: FC<PageProps<GatsbyTypes.PostQuery>> = ({ data }) => {
                   e.preventDefault()
 
                   window.open(
-                    encodeURI(decodeURI(twitterShareUrl)),
+                    twitterShareUrl,
                     'tweetwindow',
                     'width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=1',
                   )
@@ -107,11 +107,7 @@ const Post: FC<PageProps<GatsbyTypes.PostQuery>> = ({ data }) => {
                 onClick={(e) => {
                   e.preventDefault()
 
-                  window.open(
-                    encodeURI(decodeURI(hatenaShareUrl)),
-                    'hatenawindow',
-                    'width=500, height=450, menubar=no, toolbar=no, scrollbars=yes',
-                  )
+                  window.open(hatenaShareUrl, 'hatenawindow', 'width=500, height=450, menubar=no, toolbar=no, scrollbars=yes')
                 }}
               >
                 <SiHatenabookmark size={24} />
@@ -123,11 +119,7 @@ const Post: FC<PageProps<GatsbyTypes.PostQuery>> = ({ data }) => {
                 onClick={(e) => {
                   e.preventDefault()
 
-                  window.open(
-                    encodeURI(decodeURI(pocketShareUrl)),
-                    'pocketwindow',
-                    'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes',
-                  )
+                  window.open(pocketShareUrl, 'pocketwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes')
                 }}
               >
                 <FiPocket size={24} />
