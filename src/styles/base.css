@@ -7,13 +7,23 @@ body {
   font-family: system-ui, sans-serif;
   transition: background-color .3s, color .3s;
 
-  &.lightMode {
+  @media (prefers-color-scheme: light) {
     background-color: var(--color-white);
     color: var(--color-black);
   }
-  &.darkMode {
+
+  @media (prefers-color-scheme: dark) {
     background-color: var(--color-black);
     color: var(--color-white);
+  }
+
+  &.lightMode {
+    background-color: var(--color-white) !important;
+    color: var(--color-black) !important;
+  }
+  &.darkMode {
+    background-color: var(--color-black) !important;
+    color: var(--color-white) !important;
   }
 }
 a {
