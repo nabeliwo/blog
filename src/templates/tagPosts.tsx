@@ -37,27 +37,29 @@ const TagPosts: FC<Props> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <p className={classes.description}>
-        # {getTagLabel(pageContext.tag)} のタグがついた記事は{totalCount}件あります。
-      </p>
+      <div className={classes.wrapper}>
+        <p className={classes.description}>
+          # {getTagLabel(pageContext.tag)} のタグがついた記事は{totalCount}件あります。
+        </p>
 
-      <section>
-        {edges.map(({ node }) => {
-          const { id, frontmatter, fields } = node
+        <section>
+          {edges.map(({ node }) => {
+            const { id, frontmatter, fields } = node
 
-          return (
-            <article key={id} className={classes.article}>
-              <p className={classes.date}>
-                <Time format="YYYY.MM.DD">{frontmatter?.date || ''}</Time>
-              </p>
+            return (
+              <article key={id} className={classes.article}>
+                <p className={classes.date}>
+                  <Time format="YYYY.MM.DD">{frontmatter?.date || ''}</Time>
+                </p>
 
-              <h2 className={classes.title}>
-                <Link to={fields?.slug || ''}>{frontmatter?.title}</Link>
-              </h2>
-            </article>
-          )
-        })}
-      </section>
+                <h2 className={classes.title}>
+                  <Link to={fields?.slug || ''}>{frontmatter?.title}</Link>
+                </h2>
+              </article>
+            )
+          })}
+        </section>
+      </div>
     </Layout>
   )
 }

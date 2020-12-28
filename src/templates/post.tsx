@@ -62,7 +62,11 @@ const Post: FC<PageProps<GatsbyTypes.PostQuery>> = ({ data }) => {
 
           <Tags tags={tags} />
 
-          {image && <img className={classes.keyVisual} src={image} width="100%" alt="" />}
+          {image && (
+            <div className={classes.keyVisual}>
+              <img src={image} width="100%" alt="" />
+            </div>
+          )}
         </div>
 
         <div className={classes.content}>

@@ -1,6 +1,3 @@
-.list {
-  margin: 0 calc(-1 * var(--gutter-xxs));
-}
 .item {
   display: inline-block;
   margin: 0 var(--gutter-xxs);

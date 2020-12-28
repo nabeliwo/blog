@@ -1,8 +1,19 @@
+.wrapper {
+  padding: 0 var(--gutter-s);
+
+  @media (--viewport-sp) {
+    padding: 0 var(--gutter-xs);
+  }
+}
 .description {
   margin-bottom: 10rem;
   font-size: var(--font-size-m);
   line-height: 1.6;
   text-align: center;
+
+  @media (--viewport-sp) {
+    margin-bottom: var(--gutter-xxl);
+  }
 }
 .article {
   margin: var(--gutter-xxl) 0;
@@ -18,6 +29,10 @@
 .date {
   margin-bottom: var(--gutter-xxs);
   font-size: var(--font-size-m);
+
+  @media (--viewport-sp) {
+    font-size: var(--font-size-s);
+  }
 }
 .title {
   font-weight: bold;
@@ -25,4 +40,8 @@
   line-height: 1.77;
   letter-spacing: 0.2rem;
   text-decoration: underline;
+
+  @media (--viewport-sp) {
+    line-height: 1.5;
+  }
 }

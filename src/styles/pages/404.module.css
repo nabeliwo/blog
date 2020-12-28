@@ -2,17 +2,35 @@
   padding: var(--gutter-xxl) 0;
   font-size: var(--font-size-s);
   text-align: center;
+
+  @media (--viewport-sp) {
+    padding: 0 var(--gutter-xs);
+    text-align: left;
+  }
 }
 .head {
   margin-bottom: var(--gutter-xxl);
+
+  @media (--viewport-sp) {
+    margin-bottom: var(--gutter-xl);
+  }
 }
 .title {
   margin-bottom: var(--gutter-s);
   font-size: var(--font-size-l);
+
+  @media (--viewport-sp) {
+    margin-bottom: var(--gutter-xs) !important;
+  }
 }
 .description {
   margin-bottom: var(--gutter-s);
   font-size: var(--font-size-m);
+  line-height: 1.6;
+
+  @media (--viewport-sp) {
+    margin-bottom: var(--gutter-xs);
+  }
 }
 .link {
   font-size: var(--font-size-m);
