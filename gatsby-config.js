@@ -101,5 +101,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'G-W361GVK4CZ',
+        head: true,
+        respectDNT: true,
+      },
+    },
   ],
 }

@@ -18,12 +18,12 @@ body {
   }
 
   &.lightMode {
-    background-color: var(--color-white) !important;
-    color: var(--color-black) !important;
+    background-color: var(--color-white);
+    color: var(--color-black);
   }
   &.darkMode {
-    background-color: var(--color-black) !important;
-    color: var(--color-white) !important;
+    background-color: var(--color-black);
+    color: var(--color-white);
   }
 }
 a {

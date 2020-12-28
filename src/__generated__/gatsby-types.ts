@@ -1210,8 +1210,6 @@ type Query_allDirectoryArgs = {
 type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  port: Maybe<IntQueryOperatorInput>;
-  host: Maybe<StringQueryOperatorInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -1327,8 +1325,6 @@ type Query_allSitePluginArgs = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
-  readonly port: Maybe<Scalars['Int']>;
-  readonly host: Maybe<Scalars['String']>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
@@ -1539,8 +1535,6 @@ enum SiteFieldsEnum {
   siteMetadata___social___instagram___url = 'siteMetadata.social.instagram.url',
   siteMetadata___social___github___name = 'siteMetadata.social.github.name',
   siteMetadata___social___github___url = 'siteMetadata.social.github.url',
-  port = 'port',
-  host = 'host',
   polyfill = 'polyfill',
   pathPrefix = 'pathPrefix',
   id = 'id',
@@ -1634,8 +1628,6 @@ enum SiteFieldsEnum {
 type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  readonly port: Maybe<IntQueryOperatorInput>;
-  readonly host: Maybe<StringQueryOperatorInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -1879,6 +1871,11 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___feeds___query = 'pluginCreator.pluginOptions.feeds.query',
   pluginCreator___pluginOptions___feeds___output = 'pluginCreator.pluginOptions.feeds.output',
   pluginCreator___pluginOptions___feeds___title = 'pluginCreator.pluginOptions.feeds.title',
+  pluginCreator___pluginOptions___trackingId = 'pluginCreator.pluginOptions.trackingId',
+  pluginCreator___pluginOptions___head = 'pluginCreator.pluginOptions.head',
+  pluginCreator___pluginOptions___respectDNT = 'pluginCreator.pluginOptions.respectDNT',
+  pluginCreator___pluginOptions___anonymize = 'pluginCreator.pluginOptions.anonymize',
+  pluginCreator___pluginOptions___pageTransitionDelay = 'pluginCreator.pluginOptions.pageTransitionDelay',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator.pluginOptions.pathCheck',
   pluginCreator___pluginOptions___allExtensions = 'pluginCreator.pluginOptions.allExtensions',
   pluginCreator___pluginOptions___isTSX = 'pluginCreator.pluginOptions.isTSX',
@@ -2087,6 +2084,11 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___query = 'pluginOptions.feeds.query',
   pluginOptions___feeds___output = 'pluginOptions.feeds.output',
   pluginOptions___feeds___title = 'pluginOptions.feeds.title',
+  pluginOptions___trackingId = 'pluginOptions.trackingId',
+  pluginOptions___head = 'pluginOptions.head',
+  pluginOptions___respectDNT = 'pluginOptions.respectDNT',
+  pluginOptions___anonymize = 'pluginOptions.anonymize',
+  pluginOptions___pageTransitionDelay = 'pluginOptions.pageTransitionDelay',
   pluginOptions___pathCheck = 'pluginOptions.pathCheck',
   pluginOptions___allExtensions = 'pluginOptions.allExtensions',
   pluginOptions___isTSX = 'pluginOptions.isTSX',
@@ -2211,6 +2213,11 @@ type SitePluginPluginOptions = {
   readonly height: Maybe<Scalars['Int']>;
   readonly query: Maybe<Scalars['String']>;
   readonly feeds: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsFeeds>>>;
+  readonly trackingId: Maybe<Scalars['String']>;
+  readonly head: Maybe<Scalars['Boolean']>;
+  readonly respectDNT: Maybe<Scalars['Boolean']>;
+  readonly anonymize: Maybe<Scalars['Boolean']>;
+  readonly pageTransitionDelay: Maybe<Scalars['Int']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
   readonly allExtensions: Maybe<Scalars['Boolean']>;
   readonly isTSX: Maybe<Scalars['Boolean']>;
@@ -2241,6 +2248,11 @@ type SitePluginPluginOptionsFilterInput = {
   readonly height: Maybe<IntQueryOperatorInput>;
   readonly query: Maybe<StringQueryOperatorInput>;
   readonly feeds: Maybe<SitePluginPluginOptionsFeedsFilterListInput>;
+  readonly trackingId: Maybe<StringQueryOperatorInput>;
+  readonly head: Maybe<BooleanQueryOperatorInput>;
+  readonly respectDNT: Maybe<BooleanQueryOperatorInput>;
+  readonly anonymize: Maybe<BooleanQueryOperatorInput>;
+  readonly pageTransitionDelay: Maybe<IntQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
   readonly allExtensions: Maybe<BooleanQueryOperatorInput>;
   readonly isTSX: Maybe<BooleanQueryOperatorInput>;
@@ -2361,56 +2373,9 @@ type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-type AllPostsQueryVariables = Exact<{
-  skip: Scalars['Int'];
-  limit: Scalars['Int'];
-}>;
-
-
-type AllPostsQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<MarkdownRemark, 'id'>
-        & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description' | 'date' | 'tags'>>, readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>> }
-      ) }> } };
-
-type PostQueryVariables = Exact<{
-  slug: Scalars['String'];
-}>;
-
-
-type PostQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'siteUrl'>> }>, readonly markdownRemark: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description' | 'date' | 'image' | 'tags'>>, readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>> }
-  )> };
-
-type TagPostsQueryVariables = Exact<{
-  tag: Maybe<Scalars['String']>;
-}>;
-
-
-type TagPostsQuery = { readonly allMarkdownRemark: (
-    Pick<MarkdownRemarkConnection, 'totalCount'>
-    & { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<MarkdownRemark, 'id'>
-        & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'date'>>, readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>> }
-      ) }> }
-  ) };
-
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
 type FooterQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type FooterQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly social: Maybe<{ readonly twitter: Maybe<Pick<SiteSiteMetadataSocialTwitter, 'url'>>, readonly instagram: Maybe<Pick<SiteSiteMetadataSocialInstagram, 'url'>>, readonly github: Maybe<Pick<SiteSiteMetadataSocialGithub, 'url'>> }> }> }> };
-
-type HeadQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description' | 'image' | 'siteUrl'>
-      & { readonly social: Maybe<{ readonly twitter: Maybe<Pick<SiteSiteMetadataSocialTwitter, 'name'>> }> }
-    )> }> };
 
 }

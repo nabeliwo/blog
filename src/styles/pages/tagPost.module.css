@@ -13,6 +13,7 @@
 
   @media (--viewport-sp) {
     margin-bottom: var(--gutter-xxl);
+    text-align: left;
   }
 }
 .article {
