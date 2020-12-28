@@ -41,9 +41,10 @@
   transition: transform .3s ease;
   content: "";
 }
-.input:checked+.trigger {
+.input:checked + .trigger {
   background-position: -100%;
-}
-.input:checked+.trigger::before {
-  transform: translateX(18px);
+
+  &::before {
+    transform: translateX(18px);
+  }
 }

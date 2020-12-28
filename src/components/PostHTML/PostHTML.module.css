@@ -1,79 +1,89 @@
 .wrapper {
-  h2 {
+  & h2 {
     margin: 10rem 0 3rem;
     font-weight: bold;
     font-size: 2rem;
     line-height: 2.1;
+
+    & + p,
+    & + ul,
+    & + table,
+    & + pre {
+      margin-top: 0;
+    }
   }
-  h3 {
+  & h3 {
     position: relative;
     margin: 5rem 0 2rem;
     padding-left: var(--gutter-xs);
     font-size: 1.8rem;
     line-height: 1.65;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0.4rem;
+      bottom: 0.4rem;
+      left: 0;
+      width: 0.4rem;
+      background-color: var(--color-black);
+      content: '';
+      transition: background-color .3s;
+    }
   }
-  h3::before {
-    display: block;
-    position: absolute;
-    top: 0.4rem;
-    bottom: 0.4rem;
-    left: 0;
-    width: 0.4rem;
-    background-color: var(--color-black);
-    content: '';
-    transition: background-color .3s;
-  }
-  p {
+  & p {
     margin-top: var(--gutter-l);
     font-size: var(--font-size-m);
     line-height: 2.54;
   }
-  ul {
+  & ul {
     margin-top: var(--gutter-l);
     padding-left: var(--gutter-s);
     font-size: var(--font-size-m);
     line-height: 2.54;
     list-style-type: disc;
+
+    & ul,
+    & p {
+      margin-top: 0;
+    }
   }
-  ul ul,
-  ul p {
-    margin-top: 0;
-  }
-  ol {
+  & ol {
     margin-top: var(--gutter-l);
     padding-left: var(--gutter-s);
     font-size: var(--font-size-m);
     line-height: 2.54;
     list-style-type: decimal;
+
+    & ol,
+    & p {
+      margin-top: 0;
+    }
+    & ol {
+      list-style-type: lower-roman;
+    }
   }
-  ol ol,
-  ol p {
-    margin-top: 0;
-  }
-  ol ol {
-    list-style-type: lower-roman;
-  }
-  table {
+  & table {
     width: 100%;
     margin-top: var(--gutter-l);
     font-size: var(--font-size-s);
     border-collapse: collapse;
 
-    th,
-    td {
+    & th,
+    & td {
       padding: var(--gutter-xxs);
       border: 1px solid var(--color-black);
       line-height: 1.4;
     }
 
-    th {
+    & th {
       font-weight: bold;
     }
   }
-  a {
+  & a {
     text-decoration: underline;
   }
-  img {
+  & img {
     display: block;
     width: auto;
     height: auto;
@@ -82,14 +92,14 @@
     margin: 0 auto;
     vertical-align: top;
   }
-  strong {
+  & strong {
     font-weight: bold;
   }
-  pre {
+  & pre {
     margin-top: var(--gutter-l);
     font-size: var(--font-size-s);
   }
-  hr {
+  & hr {
     display: block;
     width: 20%;
     height: 0;
@@ -98,37 +108,29 @@
     border-top: 1px dashed var(--color-black);
   }
 
-  > *:first-child {
-    margin-top: 0;
-  }
-  h2 + p,
-  h2 + ul,
-  h2 + table,
-  h2 + pre {
+  & > *:first-child {
     margin-top: 0;
   }
 
   @media (--viewport-sp) {
-    h2 {
+    & h2 {
       margin: 7rem 0 3rem;
       line-height: 1.5;
     }
-    p {
+    & p {
       line-height: 2;
     }
-    ul {
+    & ul {
       line-height: 2;
     }
-    ol {
+    & ol {
       line-height: 2;
     }
-    table {
-      th,
-      td {
-        font-size: var(--font-size-xs);
-      }
+    & table th,
+    & table td {
+      font-size: var(--font-size-xs);
     }
-    img {
+    & img {
       width: calc(100% + calc(var(--gutter-xs) * 2));
       max-width: calc(100% + calc(var(--gutter-xs) * 2));
       margin: 0 calc(-1 * var(--gutter-xs));
@@ -136,16 +138,14 @@
   }
 }
 body:global(.darkMode) .wrapper {
-  h3::before {
+  & h3::before {
     background-color: var(--color-white);
   }
-  table {
-    th,
-    td {
-      border-color: var(--color-white);
-    }
+  & table th,
+  & table td {
+    border-color: var(--color-white);
   }
-  hr {
+  & hr {
     border-color: var(--color-white);
   }
 }

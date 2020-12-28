@@ -6,25 +6,26 @@
 .list {
   display: flex;
   align-items: center;
-}
-.list > li {
-  margin-left: var(--gutter-xxs);
 
-  &.prevDouble {
-    margin-left: 0;
-  }
-  &.prev {
-    margin-right: var(--gutter-xs);
-
-    + li {
+  & > li {
+    margin-left: var(--gutter-xxs);
+  
+    &.prevDouble {
       margin-left: 0;
     }
-  }
-  &.next {
-    margin-left: var(--gutter-xs);
-  }
-  &.nextDouble {
-    margin-right: 0;
+    &.prev {
+      margin-right: var(--gutter-xs);
+  
+      + li {
+        margin-left: 0;
+      }
+    }
+    &.next {
+      margin-left: var(--gutter-xs);
+    }
+    &.nextDouble {
+      margin-right: 0;
+    }
   }
 }
 .item {

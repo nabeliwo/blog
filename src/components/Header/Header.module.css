@@ -1,6 +1,10 @@
 .wrapper {
-  padding: 8rem 0;
+  padding: 10rem 0;
   text-align: center;
+
+  @media (--viewport-sp) {
+    padding: 8rem 0;
+  }
 }
 .link {
   display: inline-block;

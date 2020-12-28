@@ -80,13 +80,13 @@
   }
 }
 body:global(.darkMode) {
-  .title {
+  & .title {
     border-bottom-color: var(--color-white);
   }
-  .shareInner {
+  & .shareInner {
     border-color: var(--color-whitek);
   }
-  .shareTitle {
+  & .shareTitle {
     background-color: var(--color-black);
   }
 }
