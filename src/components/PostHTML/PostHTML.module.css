@@ -112,7 +112,7 @@
     margin-top: 0;
   }
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     & h2 {
       margin: 7rem 0 3rem;
       line-height: 1.5;

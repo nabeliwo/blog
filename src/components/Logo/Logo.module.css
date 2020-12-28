@@ -1,7 +1,7 @@
 .wrapper {
   fill: var(--color-primary);
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     width: 260px;
   }
 }

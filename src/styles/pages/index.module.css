@@ -1,7 +1,7 @@
 .wrapper {
   padding: var(--gutter-xl) var(--gutter-xs) 16rem;
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     padding: var(--gutter-m) var(--gutter-xs) 12rem;
   }
 }
@@ -17,7 +17,7 @@
     margin-bottom: 0;
   }
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     margin: var(--gutter-xxl) 0;
     text-align: left;
   }
@@ -26,7 +26,7 @@
   margin-bottom: var(--gutter-xxs);
   font-size: var(--font-size-m);
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     font-size: var(--font-size-s);
   }
 }
@@ -38,7 +38,7 @@
   letter-spacing: 0.2rem;
   text-decoration: underline;
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     margin-bottom: var(--gutter-xxs);
     line-height: 1.5;
   }
@@ -48,7 +48,7 @@
   font-size: var(--font-size-m);
   line-height: 1.6;
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     margin-bottom: var(--gutter-xs);
     line-height: 1.4;
   }

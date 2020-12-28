@@ -2,7 +2,7 @@
   padding: 10rem 0;
   text-align: center;
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     padding: 8rem 0;
   }
 }

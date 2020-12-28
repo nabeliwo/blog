@@ -3,7 +3,7 @@
   font-size: var(--font-size-s);
   text-align: center;
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     padding: 0 var(--gutter-xs);
     text-align: left;
   }
@@ -11,7 +11,7 @@
 .head {
   margin-bottom: var(--gutter-xxl);
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     margin-bottom: var(--gutter-xl);
   }
 }
@@ -19,7 +19,7 @@
   margin-bottom: var(--gutter-s);
   font-size: var(--font-size-l);
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     margin-bottom: var(--gutter-xs);
   }
 }
@@ -28,7 +28,7 @@
   font-size: var(--font-size-m);
   line-height: 1.6;
 
-  @media (--viewport-sp) {
+  @media (max-width: 566px) {
     margin-bottom: var(--gutter-xs);
   }
 }
