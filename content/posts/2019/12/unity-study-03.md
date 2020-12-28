@@ -2,7 +2,7 @@
 title: "【Unity勉強】3日目：玉転がしを作る"
 description: "ついに実際に手を動かしてサンプル的なものを作ってみた。"
 date: "2019-12-27"
-tags: ["unity", "unity-study"]
+tags: ["unity"]
 image: ""
 ---
 

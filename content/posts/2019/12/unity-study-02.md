@@ -2,7 +2,7 @@
 title: "【Unity勉強】2日目：Unity の基本的な概念を知る"
 description: "Unity の画面の意味やら基本的な概念を学んだ。"
 date: "2019-12-25"
-tags: ["unity", "unity-study"]
+tags: ["unity"]
 image: ""
 ---
 

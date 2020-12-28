@@ -2,7 +2,7 @@
 title: "#3 土地探し【家を建てる話をするシリーズ】"
 description: "土地探しに邁進していた日々の話です。"
 date: "2020-12-22"
-tags: ["my-home"]
+tags: ["house"]
 image: ""
 ---
 

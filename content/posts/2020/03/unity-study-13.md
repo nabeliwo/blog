@@ -2,7 +2,7 @@
 title: "【Unity勉強】13日目：SteamVR Plugin を使って VR 開発をする"
 description: "Unity で SteamVR Plugin を使って簡単に VR 開発をする話。"
 date: "2020-03-30"
-tags: ["vr", "htc-vive-pro", "unity", "unity-study", "steam"]
+tags: ["vr"]
 image: ""
 ---
 

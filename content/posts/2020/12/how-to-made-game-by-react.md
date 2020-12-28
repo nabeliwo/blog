@@ -2,7 +2,7 @@
 title: "React で2Dゲームを作る技術"
 description: "SmartHR Advent Calendar 2020 用のネタとして、 React で Canvas を使わずにゲームを作る話をします。"
 date: "2020-12-21"
-tags: ["react"]
+tags: ["javascript"]
 image: ""
 ---
 

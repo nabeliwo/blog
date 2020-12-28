@@ -1,16 +1,20 @@
 html {
-  background-color: var(--color-white);
-  color: var(--color-black);
   font-size: 62.5%;
 }
 body {
+  min-height: 100vh;
   word-wrap: break-word;
   font-family: system-ui, sans-serif;
   transition: background-color .3s, color .3s;
-}
-body.darkMode {
-  background-color: var(--color-black);
-  color: var(--color-white);
+
+  &.lightMode {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+  &.darkMode {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
 }
 a {
   color: inherit;

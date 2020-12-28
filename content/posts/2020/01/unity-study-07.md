@@ -2,7 +2,7 @@
 title: "【Unity勉強】7日目：モバイル対応をする"
 description: "個人的にはそんなに興味がないんだけど一応モバイルへの対応の仕方も読んでみた。"
 date: "2020-01-12"
-tags: ["unity", "unity-study"]
+tags: ["unity"]
 image: ""
 ---
 

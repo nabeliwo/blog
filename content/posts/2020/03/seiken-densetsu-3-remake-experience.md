@@ -2,7 +2,7 @@
 title: "聖剣伝説3 TRIALS of MANA 体験版をやった"
 description: "かねてより待ち望んでいた聖剣伝説3リメイクの体験版をやってみた感想。"
 date: "2020-03-21"
-tags: ["seiken3-tom", "game"]
+tags: ["game"]
 image: ""
 ---
 

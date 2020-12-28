@@ -2,7 +2,7 @@
 title: "【Unity勉強】11日目：VRChat SDK をいじる"
 description: "VRChat への自作ワールドアップロードのやり方がわかったので、 SDK をいじって色々やってみる。"
 date: "2020-01-30"
-tags: ["unity", "unity-study", "VRChat"]
+tags: ["unity", "vr"]
 image: ""
 ---
 

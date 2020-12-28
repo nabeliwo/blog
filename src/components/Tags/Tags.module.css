@@ -1,5 +1,5 @@
 .list {
-  margin: -(var(--gutter-xxs));
+  margin: 0 calc(-1 * var(--gutter-xxs));
 }
 .item {
   display: inline-block;

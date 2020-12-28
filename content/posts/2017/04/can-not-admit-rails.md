@@ -2,7 +2,7 @@
 title: "Railsをどうしても認められないこの気持ち、恋かな"
 description: "Railsを仕事で触るようになってそろそろ1ヶ月…所感です。"
 date: "2017-04-18"
-tags: ["tech", "ruby-on-rails", "ruby"]
+tags: ["ruby"]
 image: ""
 ---
 

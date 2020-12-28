@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: var(--container-width-lg);
+  max-width: var(--container-width-l);
   margin: 0 auto;
   padding: 6rem 0 3rem;
   border-top: var(--color-black) dashed 2px;
@@ -26,9 +26,10 @@ body:global(.darkMode) .wrapper {
   display: flex;
   align-items: center;
   margin-bottom: var(--gutter-xs);
-}
-.social > li {
-  margin: 0 var(--gutter-xxs);
+
+  & > li {
+    margin: 0 var(--gutter-xxs);
+  }
 }
 .socialLink {
   display: inline-block;

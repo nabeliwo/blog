@@ -2,7 +2,7 @@
 title: "Nintendo Switchゲットだぜ"
 description: "ついに任天堂から新ハード「Nintendo Switch」が発売されましたね。"
 date: "2017-03-04"
-tags: ["diary", "game", "the-legend-of-zelda"]
+tags: ["game"]
 image: ""
 ---
 

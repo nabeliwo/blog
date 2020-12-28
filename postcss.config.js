@@ -1,5 +1,14 @@
-const poscssNested = require('postcss-nested')
-
 module.exports = () => ({
-  plugins: [poscssNested],
+  plugins: [
+    require('postcss-custom-media'),
+    require('postcss-nested'),
+    require('cssnano')({
+      preset: [
+        'default',
+        {
+          normalizeUrl: false,
+        },
+      ],
+    }),
+  ],
 })

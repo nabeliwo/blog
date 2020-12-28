@@ -2,7 +2,7 @@
 title : "ようやくLet's Encryptでhttpsになった"
 description: "随分時間がかかってしまったけれどやっとhttpsになった。"
 date: "2017-06-06"
-tags: ["tech", "lets-encrypt"]
+tags: ["diary"]
 image: ""
 ---
 

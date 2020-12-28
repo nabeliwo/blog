@@ -5,7 +5,6 @@ import { Layout } from '../components/Layout'
 import { Time } from '../components/Time'
 import { Tags } from '../components/Tags'
 import { Pagination } from '../components/Pagination'
-
 import classes from '../styles/pages/index.module.css'
 
 export const query = graphql`

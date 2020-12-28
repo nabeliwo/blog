@@ -2,7 +2,7 @@
 title: "プラコラんぎもぢいいいいい！！！！！！"
 date: "2018-12-06"
 description: "プライムシューターコラボは最強だという話。"
-tags: ["game", "splatoon"]
+tags: ["game"]
 image: ""
 ---
 

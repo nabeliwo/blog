@@ -2,7 +2,7 @@
 title: "ブログをはてぶからHugoに移しました"
 description: "ブログをHugoで作り直したのでそのご報告記事です。"
 date: "2016-12-18"
-tags: ["diary"]
+tags: ["diary", "made"]
 image: ""
 ---
 

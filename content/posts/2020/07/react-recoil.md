@@ -2,7 +2,7 @@
 title: "Recoil 触ってみた感想"
 description: "技術記事というよりかはただの Recoil を触って思ったことを雑に書く。"
 date: "2020-07-30"
-tags: ["react", "recoil", "javascript", "tech"]
+tags: ["javascript"]
 image: ""
 ---
 

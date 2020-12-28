@@ -2,7 +2,7 @@
 title: "ソードアート・オンライン 24 ユナイタル・リングⅢ を読んだ"
 description: "SAO の新シリーズ3巻目を読んだので感想。"
 date: "2020-07-27"
-tags: ["review", "sao"]
+tags: ["book"]
 image: ""
 ---
 

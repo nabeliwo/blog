@@ -2,7 +2,7 @@
 title: "ソードアート・オンライン 21 ユナイタル・リングⅠ を読んだ"
 description: "SAO の新シリーズを読み始めたので感想。"
 date: "2020-07-25"
-tags: ["review", "sao"]
+tags: ["book"]
 image: ""
 ---
 

@@ -2,7 +2,7 @@
 title: "バーチャルな美少女に受肉したので現状と課題について"
 description: "いわゆるバ美肉というやつの話。"
 date: "2018-08-25"
-tags: ["vr", "live2d", "facerig"]
+tags: ["vr"]
 image: ""
 ---
 

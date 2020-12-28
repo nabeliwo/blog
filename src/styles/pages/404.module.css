@@ -1,0 +1,20 @@
+.wrapper {
+  padding: var(--gutter-xxl) 0;
+  font-size: var(--font-size-s);
+  text-align: center;
+}
+.head {
+  margin-bottom: var(--gutter-xxl);
+}
+.title {
+  margin-bottom: var(--gutter-s);
+  font-size: var(--font-size-l);
+}
+.description {
+  margin-bottom: var(--gutter-s);
+  font-size: var(--font-size-m);
+}
+.link {
+  font-size: var(--font-size-m);
+  text-decoration: underline;
+}

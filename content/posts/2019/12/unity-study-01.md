@@ -2,7 +2,7 @@
 title: "【Unity勉強】1日目：Unity Hub を知る"
 description: "僕が一番楽しめる理想のゲームを作るために Unity の勉強をはじめました。"
 date: "2019-12-11"
-tags: ["unity", "unity-study"]
+tags: ["unity"]
 image: ""
 ---
 

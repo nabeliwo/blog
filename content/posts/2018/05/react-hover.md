@@ -2,7 +2,7 @@
 title: "React のホバー時のスタイル変更を簡単にレスポンシブ対応させる"
 description: "要素にホバーした際のスタイル変更のめんどいあれこれを React で簡単にやっちゃう話です。"
 date: "2018-05-13"
-tags: ["javascript", "react", "css"]
+tags: ["javascript", "css"]
 image: ""
 ---
 
@@ -106,7 +106,7 @@ const Link = hoverProvider(<a href="" className="link">リンク</a>)
 
 CSS 側はこう。シンプル。
 
-```
+```css
 .link {
   color: blue;
 }

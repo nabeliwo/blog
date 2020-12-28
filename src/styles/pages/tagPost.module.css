@@ -1,9 +1,11 @@
-.wrapper {
-  padding: var(--gutter-xl) 0 16rem;
+.description {
+  margin-bottom: 10rem;
+  font-size: var(--font-size-m);
+  line-height: 1.6;
+  text-align: center;
 }
 .article {
-  margin: 10rem 0;
-  text-align: center;
+  margin: var(--gutter-xxl) 0;
 
   &:first-child {
     margin-top: 0;
@@ -18,18 +20,9 @@
   font-size: var(--font-size-m);
 }
 .title {
-  margin-bottom: var(--gutter-xs);
   font-weight: bold;
   font-size: var(--font-size-l);
   line-height: 1.77;
   letter-spacing: 0.2rem;
   text-decoration: underline;
-}
-.description {
-  margin-bottom: var(--gutter-xs);
-  font-size: var(--font-size-m);
-  line-height: 1.6;
-}
-.paginationWrapper {
-  text-align: center;
 }

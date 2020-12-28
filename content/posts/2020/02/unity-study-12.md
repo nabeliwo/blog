@@ -2,7 +2,7 @@
 title: "【Unity勉強】12日目：GitHub for Unity が良いっぽい"
 description: "Unity のプロジェクトを Git 管理する場合は GitHub for Unity が良いっぽいという情報を得たので試してみた。"
 date: "2020-02-03"
-tags: ["unity", "unity-study", "git"]
+tags: ["unity"]
 image: ""
 ---
 

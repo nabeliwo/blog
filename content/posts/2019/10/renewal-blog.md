@@ -2,7 +2,7 @@
 title: "ブログを GatsbyJS でリニューアルしました"
 description: "React ベースの静的サイトジェネレータである GatsbyJS を使ってブログを作り直したので解説。"
 date: "2019-10-11"
-tags: ["tech", "javascript", "netlify", "react", "gatsby"]
+tags: ["javascript", "made"]
 image: ""
 ---
 

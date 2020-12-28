@@ -2,7 +2,7 @@
 title: "『作れる！学べる！Unreal Engine 4 ゲーム開発入門』を読んだ"
 description: "Unreal Engine 4 ってどんな感じなのかなーを知りたくて勉強してみた話。"
 date: "2020-09-05"
-tags: ["ue4"]
+tags: ["ue", "book"]
 image: ""
 ---
 

@@ -2,7 +2,7 @@
 title: "ゲームをやりこみたいのである"
 description: "ゲームに対する姿勢を変えたいという話。"
 date: "2017-02-05"
-tags: ["diary", "game"]
+tags: ["diary"]
 image: ""
 ---
 

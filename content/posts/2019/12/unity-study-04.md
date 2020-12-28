@@ -2,7 +2,7 @@
 title: "【Unity勉強】4日目：ヒヨコを大砲で撃つむごいゲームを作っている"
 description: "ついに実際にゲームっぽいものを作っているんだけれど、なんだかとてもむごいことをさせられています。"
 date: "2019-12-30"
-tags: ["unity", "unity-study"]
+tags: ["unity"]
 image: ""
 ---
 

@@ -2,7 +2,7 @@
 title: "ソードアート・オンライン 25 ユナイタル・リングIV を読んだ"
 description: "SAO の新シリーズ4巻目を読んだので感想。"
 date: "2020-12-17"
-tags: ["review", "sao"]
+tags: ["book"]
 image: ""
 ---
 

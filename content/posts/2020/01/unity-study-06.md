@@ -2,7 +2,7 @@
 title: "【Unity勉強】6日目：3Dのゲームを作る"
 description: "ようやく3Dゲームの作り方までたどり着きました。"
 date: "2020-01-11"
-tags: ["unity", "unity-study"]
+tags: ["unity"]
 image: ""
 ---
 

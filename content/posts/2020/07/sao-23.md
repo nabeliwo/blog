@@ -2,7 +2,7 @@
 title: "ソードアート・オンライン 23 ユナイタル・リングⅡ を読んだ"
 description: "SAO の新シリーズ2巻目を読んだので感想。"
 date: "2020-07-26"
-tags: ["review", "sao"]
+tags: ["book"]
 image: ""
 ---
 

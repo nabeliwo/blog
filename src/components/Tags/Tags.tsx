@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { Link } from 'gatsby'
 
+import { getTagLabel } from './getTagLabel'
 import classes from './Tags.module.css'
 
 type Props = {
@@ -14,7 +15,7 @@ export const Tags: FC<Props> = ({ tags }) => {
     <div className={classes.list}>
       {tags.map((tag, i) => (
         <Link key={i} to={`/tags/${tag}`} className={classes.item}>
-          # {tag}
+          # {getTagLabel(tag || '')}
         </Link>
       ))}
     </div>
