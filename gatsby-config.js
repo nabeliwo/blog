@@ -20,6 +20,13 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'G-W361GVK4CZ',
+        head: true,
+      },
+    },
     'gatsby-plugin-typegen',
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
@@ -99,14 +106,6 @@ module.exports = {
             title: "nabeliwo blog's RSS Feed",
           },
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'G-W361GVK4CZ',
-        head: true,
-        respectDNT: true,
       },
     },
   ],
