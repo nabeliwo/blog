@@ -24,11 +24,14 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
     tagsGroup: Pick<GatsbyTypes.Query['allMarkdownRemark'], 'group'>
   }>(`
     query {
-      posts: allMarkdownRemark {
+      posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
             fields {
               slug
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -57,15 +60,19 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
   })
 
   if (posts) {
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node }, index) => {
       const slug = node.fields?.slug
+      const next = index === 0 ? null : posts[index - 1].node
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
 
       if (slug) {
         createPage({
           path: slug,
           component: path.resolve('src/templates/post.tsx'),
           context: {
-            slug: slug,
+            slug,
+            next,
+            previous,
           },
         })
       }

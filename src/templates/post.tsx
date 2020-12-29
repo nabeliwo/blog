@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { PageProps, graphql } from 'gatsby'
+import { Link, PageProps, graphql } from 'gatsby'
 import { SiHatenabookmark } from 'react-icons/si'
 import { FiFacebook, FiPocket, FiTwitter } from 'react-icons/fi'
 
@@ -33,7 +33,19 @@ export const query = graphql`
   }
 `
 
-const Post: FC<PageProps<GatsbyTypes.PostQuery>> = ({ data }) => {
+type Post = {
+  fields: { slug: string }
+  frontmatter: { title: string }
+}
+
+type Props = PageProps<GatsbyTypes.PostQuery> & {
+  pageContext: {
+    next: Post | null
+    previous: Post | null
+  }
+}
+
+const Post: FC<Props> = ({ data, pageContext }) => {
   const title = data.markdownRemark?.frontmatter?.title
   const description = data.markdownRemark?.frontmatter?.description
   const date = data.markdownRemark?.frontmatter?.date
@@ -49,6 +61,9 @@ const Post: FC<PageProps<GatsbyTypes.PostQuery>> = ({ data }) => {
   const twitterShareUrl = `http://twitter.com/intent/tweet?text=${encodedPageFullTitle}%0a${encodedPagePermalink}`
   const hatenaShareUrl = `http://b.hatena.ne.jp/add?mode=confirm&url=${encodedPagePermalink}&title=${encodedPageFullTitle}`
   const pocketShareUrl = `http://getpocket.com/edit?url=${encodedPagePermalink}&title=${encodedPageFullTitle}`
+
+  const nextPost = pageContext.next
+  const previousPost = pageContext.previous
 
   return (
     <Layout title={title} description={description} image={image} slug={slug} isBlogPost>
@@ -126,6 +141,40 @@ const Post: FC<PageProps<GatsbyTypes.PostQuery>> = ({ data }) => {
               </a>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div className={classes.links}>
+        <ul className={classes.otherPosts}>
+          {nextPost && (
+            <li>
+              <p className={classes.otherPostLabel}>新しい記事</p>
+
+              <Link className={classes.otherPostLink} to={nextPost.fields.slug}>
+                {nextPost.frontmatter.title}
+              </Link>
+            </li>
+          )}
+
+          {previousPost && (
+            <li>
+              <p className={classes.otherPostLabel}>前の記事</p>
+
+              <Link className={classes.otherPostLink} to={previousPost.fields.slug}>
+                {previousPost.frontmatter.title}
+              </Link>
+            </li>
+          )}
+        </ul>
+
+        <div className={classes.move}>
+          <Link to="/" className={classes.moveLink}>
+            ホームに戻る
+          </Link>
+
+          <button className={classes.moveLink} onClick={() => scrollTo(0, 0)}>
+            ページトップに戻る
+          </button>
         </div>
       </div>
     </Layout>

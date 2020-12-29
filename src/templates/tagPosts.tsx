@@ -4,7 +4,7 @@ import { Link, PageProps, graphql } from 'gatsby'
 import { Layout } from '../components/Layout'
 import { Time } from '../components/Time'
 import { getTagLabel } from '../components/Tags'
-import classes from '../styles/pages/tagPost.module.css'
+import classes from '../styles/pages/tagPosts.module.css'
 
 export const query = graphql`
   query TagPosts($tag: String) {
@@ -59,6 +59,16 @@ const TagPosts: FC<Props> = ({ data, pageContext }) => {
             )
           })}
         </section>
+
+        <div className={classes.links}>
+          <Link to="/" className={classes.moveLink}>
+            ホームに戻る
+          </Link>
+
+          <button className={classes.moveLink} onClick={() => scrollTo(0, 0)}>
+            ページトップに戻る
+          </button>
+        </div>
       </div>
     </Layout>
   )
