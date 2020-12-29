@@ -26,22 +26,23 @@
   color: rgba(0, 0, 0, 0);
   cursor: pointer;
   user-select: none;
-  transition: background-position .3s ease;
+  transition: background-position .3s;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    box-shadow: 0 0.125em 0.375em rgba(0, 0, 0, .5);
+    transition: transform .3s;
+    content: "";
+  }
 }
-.trigger::before {
-  display: block;
-  position: absolute;
-  top: -2px;
-  left: 0;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: var(--color-white);
-  box-shadow: 0 0.125em 0.375em rgba(0, 0, 0, .5);
-  transition: transform .3s ease;
-  content: "";
-}
-.input:checked + .trigger {
+body:global(.darkMode) .trigger {
   background-position: -100%;
 
   &::before {
