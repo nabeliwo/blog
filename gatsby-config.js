@@ -21,10 +21,13 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'G-W361GVK4CZ',
-        head: true,
+        trackingIds: ['G-W361GVK4CZ'],
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
       },
     },
     'gatsby-plugin-typegen',

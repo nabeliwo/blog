@@ -24,7 +24,7 @@ image: ""
 
 ## 『誰のためのデザイン？』まとめ
 
-<a target="_blank" href="https://www.amazon.co.jp/gp/product/4788514346/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4788514346&linkCode=as2&tag=rankiiin-22&linkId=3fed0a195ac29068619cf681d46b3d78">誰のためのデザイン？　増補・改訂版　―認知科学者のデザイン原論</a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=rankiiin-22&l=am2&o=9&a=4788514346" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a target="_blank" href="https://www.amazon.co.jp/gp/product/4788514346/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4788514346&linkCode=as2&tag=rankiiin-22&linkId=3fed0a195ac29068619cf681d46b3d78">誰のためのデザイン？　増補・改訂版　―認知科学者のデザイン原論</a>
 
 この本は僕が今やっている Web の領域に対して書かれたデザイン本ではないが、それでも全てのデザインにおける基本原則やデザインをする人間が持つべき姿勢について教えてくれる。
 
