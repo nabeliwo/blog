@@ -17,6 +17,8 @@ const tagMap: { [key: string]: string } = {
   ruby: 'Ruby',
   infra: 'インフラ',
   design: 'デザイン',
+
+  'web-components': 'Web Components',
 }
 
 export const getTagLabel = (key: string) => {
