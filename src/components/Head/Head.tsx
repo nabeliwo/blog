@@ -38,7 +38,7 @@ export const Head: FC<Props> = ({ title, description, image, slug, isBlogPost = 
 
   const pageTitle = title ? `${title} | ${siteMetadata?.title}` : siteMetadata?.title
   const metaDescription = description || siteMetadata?.description
-  const metaImage = image || siteMetadata?.image
+  const metaImage = image ? `${siteMetadata?.siteUrl}${image}` : siteMetadata?.image
   const metaUrl = slug ? `${siteMetadata?.siteUrl}${slug}` : siteMetadata?.siteUrl
 
   return (

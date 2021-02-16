@@ -1,5 +1,5 @@
 ---
-title: "Web Components とは何か"
+title: "#1 Web Components とは何か"
 description: "共通コンポーネントライブラリで Web Components を使う可能性を模索するシリーズを始めようと思います。"
 date: "2021-02-07"
 tags: ["javascript", "web-components"]
