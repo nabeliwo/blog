@@ -72,7 +72,7 @@ Button と違って動きはありますが、 hover をフックに CSS だけ�
 
 ![Accordion Component](/images/post/2021/05/lit-web-components-smarthr-ui/05.png "Accordion Component")
 
-SmartHR UI の Accordion の実装は、 `AccodionPanel`, `AccodionPanelItem`, `AccodionPanelTrigger`, `AccodionPanelContent` の4つのコンポーネントに分かれていて、以下のように使う側で組み合わせることで使用できます。
+SmartHR UI の Accordion の実装は、 `AccordionPanel`, `AccordionPanelItem`, `AccordionPanelTrigger`, `AccordionPanelContent` の4つのコンポーネントに分かれていて、以下のように使う側で組み合わせることで使用できます。
 
 ```tsx
 import { AccordionPanel, AccordionPanelItem, AccordionPanelTrigger, AccordionPanelContent } from 'smarthr-ui'
@@ -92,15 +92,15 @@ const Component = () => (
 )
 ```
 
-今回は簡易な実装として、 `accodion-panel` と `accordion-panel-item` の2つのコンポーネントのみを実装しています。
+今回は簡易な実装として、 `accordion-panel` と `accordion-panel-item` の2つのコンポーネントのみを実装しています。
 
 ![Accordion Component の HTML](/images/post/2021/05/lit-web-components-smarthr-ui/06.png "Accordion Component の HTML")
 
 このように複数のコンポーネントによって1つの UI を作るタイプのコンポーネントを作る場合にも、 Lit で実装する際に課題がありました。  
-SmartHR UI ではデフォルトだと、同じ AccordionPanel 内にある AccodionPanelItem の場合、一つの AccordionItem が開いた状態で別の AccodionPanelItem を開くと、もともと開いていたものが閉じる仕様になっています。この機能を実現するためには、 AccodionPanel 内で現在の開閉状態を state で持ち、それを `React.createContext` でコンテクストに埋め込み、 AccodionPanelItem でそのコンテクストを抽出して状態を反映させるという処理が必要になります。
+SmartHR UI ではデフォルトだと、同じ AccordionPanel 内にある AccordionPanelItem の場合、一つの AccordionItem が開いた状態で別の AccordionPanelItem を開くと、もともと開いていたものが閉じる仕様になっています。この機能を実現するためには、 AccordionPanel 内で現在の開閉状態を state で持ち、それを `React.createContext` でコンテクストに埋め込み、 AccordionPanelItem でそのコンテクストを抽出して状態を反映させるという処理が必要になります。
 
 このような親と子のコンポーネント間でコンテクストを使って連携するような手法は、現在はシンプルな方法では実現できません。  
-今回 Web Components の実装の参考にさせてもらった [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/#index) の実装を見てみると、 Accodion 内でカスタムイベントを定義していて、親の Accodion でそのカスタムイベントをリッスンしておいて、子の AccodionItem が開かれた際にはそのコンポーネントからカスタムイベントを発火することで親に要素が開いたことを伝えるような実装をしていました。そして親の Accodion は子として渡されている AccodionItem を保持していて、イベントを発火した子以外の AccodionItem の開閉の属性を閉じる側に変更させます。
+今回 Web Components の実装の参考にさせてもらった [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/#index) の実装を見てみると、 Accordion 内でカスタムイベントを定義していて、親の Accordion でそのカスタムイベントをリッスンしておいて、子の AccordionItem が開かれた際にはそのコンポーネントからカスタムイベントを発火することで親に要素が開いたことを伝えるような実装をしていました。そして親の Accordion は子として渡されている AccordionItem を保持していて、イベントを発火した子以外の AccordionItem の開閉の属性を閉じる側に変更させます。
 
 だいぶ泥臭いことをしているな～というのが正直な感想で、 Spectrum Web Components への尊敬とつらみの気持ちがこみ上げてきます。
 
