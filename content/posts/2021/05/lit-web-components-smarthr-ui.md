@@ -27,7 +27,7 @@ Web Components で提供されたコンポーネントは React からでも Vue
 
 ## SmartHR UI を Web Components 化したい
 
-私は SmartHR という会社でエンジニアをやっています。そして SmaratHR のフロントエンドは React で統一されています。  
+私は SmartHR という会社でエンジニアをやっています。そして SmartHR のフロントエンドは React で統一されています。  
 社内の多くのプロダクトで UI を共通化するために [SmartHR UI](https://github.com/kufu/smarthr-ui) という React コンポーネント集を作っており、これを OSS 化しています。
 
 社内では技術スタックを React で統一できているので現在は問題なく SmartHR UI が運用されていますが、今後[プラットフォーム化](https://mag.smarthr.jp/guide/vision/detail/smarthr_next_2018_miyata/)が進み、サードパーティーの SmartHR アプリが作られるような状況になったときに、 SmartHR UI が React を使っていないプロダクトからでも使えるようになっていると、間口が広がって良さそうです。  
