@@ -65,27 +65,27 @@ export const Head: FC<Props> = ({ title, description, image, slug, isBlogPost = 
 
         // OpenGraph tags
         {
-          name: 'og:url',
+          property: 'og:url',
           content: metaUrl,
         },
         {
-          name: 'og:site_name',
+          property: 'og:site_name',
           content: siteMetadata?.title,
         },
         {
-          name: 'og:type',
+          property: 'og:type',
           content: isBlogPost ? 'article' : 'website',
         },
         {
-          name: 'og:title',
+          property: 'og:title',
           content: pageTitle,
         },
         {
-          name: 'og:description',
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          name: 'og:image',
+          property: 'og:image',
           content: metaImage,
         },
 
