@@ -15,7 +15,7 @@ module.exports = {
       },
       github: {
         name: 'nabeliwo',
-        url: 'https://github.com/nabeliwo',
+        url: 'https://github.com/nabeliwo/blog',
       },
     },
   },
