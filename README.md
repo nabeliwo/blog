@@ -1,4 +1,4 @@
-# nabeliwo-blog
+# blog
 
 [nabeliwo](https://twitter.com/nabeliwo)'s blog, named 'ナベリヲログ'.
 
