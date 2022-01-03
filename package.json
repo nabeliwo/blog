@@ -35,6 +35,7 @@
     "gatsby-plugin-typegen": "^2.2.2",
     "gatsby-remark-embed-youtube": "0.0.7",
     "gatsby-remark-emoji": "0.0.3",
+    "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-prismjs": "^3.10.0",
     "gatsby-remark-responsive-iframe": "^2.8.0",
     "gatsby-source-filesystem": "^2.8.1",

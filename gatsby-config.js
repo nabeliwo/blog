@@ -52,6 +52,12 @@ module.exports = {
               height: 315,
             },
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              rel: 'noopener noreferrer',
+            },
+          },
           'gatsby-remark-prismjs',
           'gatsby-remark-responsive-iframe',
           'gatsby-remark-emoji',
