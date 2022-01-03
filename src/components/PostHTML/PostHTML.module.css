@@ -107,7 +107,6 @@
     border: none;
     border-top: 1px dashed var(--color-black);
   }
-
   & figcaption {
     margin-top: var(--gutter-xs);
     font-size: var(--font-size-s);
@@ -157,5 +156,10 @@ body:global(.darkMode) .wrapper {
   }
   & hr {
     border-color: var(--color-white);
+  }
+}
+span:global(.gatsby-resp-image-wrapper) {
+  @media (max-width: 566px) {
+    margin: 0 calc(-1 * var(--gutter-xs)) !important;
   }
 }
