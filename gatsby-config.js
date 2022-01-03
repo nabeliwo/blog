@@ -41,10 +41,18 @@ module.exports = {
         path: `${__dirname}/content/posts/`,
       },
     },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 660,
+              showCaptions: ['title'],
+            },
+          },
           {
             resolve: 'gatsby-remark-embed-youtube',
             options: {

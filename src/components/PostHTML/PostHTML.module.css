@@ -108,6 +108,12 @@
     border-top: 1px dashed var(--color-black);
   }
 
+  & figcaption {
+    margin-top: var(--gutter-xs);
+    font-size: var(--font-size-s);
+    text-align: center;
+  }
+
   & > *:first-child {
     margin-top: 0;
   }
@@ -135,6 +141,9 @@
       max-width: calc(100% + calc(var(--gutter-xs) * 2));
       max-height: 100%;
       margin: 0 calc(-1 * var(--gutter-xs));
+    }
+    & figcaption {
+      font-size: var(--font-size-xs);
     }
   }
 }
