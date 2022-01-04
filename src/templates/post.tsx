@@ -33,15 +33,15 @@ export const query = graphql`
   }
 `
 
-type Post = {
+type PostType = {
   fields: { slug: string }
   frontmatter: { title: string }
 }
 
 type Props = PageProps<GatsbyTypes.PostQuery> & {
   pageContext: {
-    next: Post | null
-    previous: Post | null
+    next: PostType | null
+    previous: PostType | null
   }
 }
 
