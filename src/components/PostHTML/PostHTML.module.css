@@ -142,6 +142,7 @@
     }
     & figcaption {
       font-size: var(--font-size-xs);
+      line-height: 1.2;
     }
   }
 }
