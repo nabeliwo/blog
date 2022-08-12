@@ -6,7 +6,7 @@ tags: ["game"]
 image: "/images/post/2022/08/stray/thumbnail.jpg"
 ---
 
-巷で話題の最高に癒される猫ゲー『Stray』をクリアしたので感想を書いてみる。
+巷で話題の最高に癒される猫ゲー『[Stray](https://store.steampowered.com/app/1332010/Stray/?l=japanese)』をクリアしたので感想を書いてみる。
 
 ## 感想
 
