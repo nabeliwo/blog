@@ -1,6 +1,6 @@
 ---
 title: "話題の猫ゲー『Stray』をプレイした"
-description: "施主検査っていうのが何かって話と自分の体験談です。"
+description: "廃れた精神が潤っていくのがわかるゲームでした。"
 date: "2022-08-12"
 tags: ["game"]
 image: "/images/post/2022/08/stray/thumbnail.jpg"
