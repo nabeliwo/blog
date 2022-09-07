@@ -2,7 +2,7 @@
   & h2 {
     margin: 100px 0 30px;
     font-weight: bold;
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxl);
     line-height: 2.1;
 
     & + p,
@@ -16,7 +16,7 @@
     position: relative;
     margin: 50px 0 20px;
     padding-left: var(--gutter-xs);
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-xl);
     line-height: 1.65;
 
     &::before {
@@ -33,13 +33,13 @@
   }
   & p {
     margin-top: var(--gutter-l);
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-l);
     line-height: 2.54;
   }
   & ul {
     margin-top: var(--gutter-l);
     padding-left: var(--gutter-s);
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-l);
     line-height: 2.54;
     list-style-type: disc;
 
@@ -51,7 +51,7 @@
   & ol {
     margin-top: var(--gutter-l);
     padding-left: var(--gutter-s);
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-l);
     line-height: 2.54;
     list-style-type: decimal;
 
@@ -96,7 +96,7 @@
   }
   & pre {
     margin-top: var(--gutter-l);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-m);
   }
   & hr {
     display: block;
@@ -119,15 +119,22 @@
   @media (max-width: 566px) {
     & h2 {
       margin: 70px 0 30px;
+      font-size: var(--font-size-xl);
       line-height: 1.5;
     }
+    & h3 {
+      font-size: var(--font-size-l);
+    }
     & p {
+      font-size: var(--font-size-m);
       line-height: 2;
     }
     & ul {
+      font-size: var(--font-size-m);
       line-height: 2;
     }
     & ol {
+      font-size: var(--font-size-m);
       line-height: 2;
     }
     & table th,
@@ -139,6 +146,9 @@
       max-width: calc(100% + calc(var(--gutter-xs) * 2));
       max-height: 100%;
       margin: 0 calc(-1 * var(--gutter-xs));
+    }
+    & pre {
+      font-size: var(--font-size-s);
     }
     & figcaption {
       font-size: var(--font-size-xs);
