@@ -17,7 +17,7 @@
 }
 .title {
   margin-bottom: var(--gutter-s);
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-x3l);
 
   @media (max-width: 566px) {
     margin-bottom: var(--gutter-xs);

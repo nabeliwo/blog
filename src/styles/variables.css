@@ -2,18 +2,21 @@
   --container-width-m: 660px;
   --container-width-l: 820px;
 
-  --gutter-xxs: 0.8rem;
-  --gutter-xs: 1.6rem;
-  --gutter-s: 2.4rem;
-  --gutter-m: 3.2rem;
-  --gutter-l: 4rem;
-  --gutter-xl: 4.8rem;
-  --gutter-xxl: 5.6rem;
+  --gutter-xxs: 8px;
+  --gutter-xs: 16px;
+  --gutter-s: 24px;
+  --gutter-m: 32px;
+  --gutter-l: 4px;
+  --gutter-xl: 48px;
+  --gutter-xxl: 56px;
 
-  --font-size-xs: 1.2rem;
-  --font-size-s: 1.4rem;
-  --font-size-m: 1.6rem;
-  --font-size-l: 2.4rem;
+  --font-size-xs: 1.2rem; /* 12px */
+  --font-size-s: 1.4rem; /* 14px */
+  --font-size-m: 1.6rem; /* 16px */
+  --font-size-l: 1.8rem; /* 18px */
+  --font-size-xl: 2rem; /* 20px */
+  --font-size-xxl: 2.2rem; /* 22px */
+  --font-size-x3l: 2.4rem; /* 24px */
 
   --color-primary: #4090bf;
   --color-black: #333;

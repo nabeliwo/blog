@@ -6,7 +6,7 @@
   }
 }
 .description {
-  margin-bottom: 10rem;
+  margin-bottom: 100px;
   font-size: var(--font-size-m);
   line-height: 1.6;
   text-align: center;
@@ -37,9 +37,9 @@
 }
 .title {
   font-weight: bold;
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-x3l);
   line-height: 1.77;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.08em;
   text-decoration: underline;
 
   @media (max-width: 566px) {
@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 100px;
 }
 .moveLink {
   font-size: var(--font-size-xs);

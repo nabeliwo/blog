@@ -1,8 +1,8 @@
 .wrapper {
   & h2 {
-    margin: 10rem 0 3rem;
+    margin: 100px 0 30px;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: var(--font-size-xl);
     line-height: 2.1;
 
     & + p,
@@ -14,18 +14,18 @@
   }
   & h3 {
     position: relative;
-    margin: 5rem 0 2rem;
+    margin: 50px 0 20px;
     padding-left: var(--gutter-xs);
-    font-size: 1.8rem;
+    font-size: var(--font-size-l);
     line-height: 1.65;
 
     &::before {
       display: block;
       position: absolute;
-      top: 0.4rem;
-      bottom: 0.4rem;
+      top: 4px;
+      bottom: 4px;
       left: 0;
-      width: 0.4rem;
+      width: 4px;
       background-color: var(--color-black);
       content: '';
       transition: background-color .3s;
@@ -118,7 +118,7 @@
 
   @media (max-width: 566px) {
     & h2 {
-      margin: 7rem 0 3rem;
+      margin: 70px 0 30px;
       line-height: 1.5;
     }
     & p {

@@ -20,9 +20,9 @@
   padding-bottom: var(--gutter-m);
   border-bottom: 2px dashed var(--color-black);
   font-weight: bold;
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-x3l);
   line-height: 1.77;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.08em;
   transition: border-color .3s;
 
   @media (max-width: 566px) {
@@ -50,13 +50,13 @@
 .share {
   display: flex;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 100px;
 }
 .shareInner {
   position: relative;
   padding: var(--gutter-m) var(--gutter-s) var(--gutter-s);
   border: 2px solid var(--color-black);
-  border-radius: 1rem;
+  border-radius: 10px;
   transition: border-color .3s;
 }
 .shareTitle {
@@ -66,7 +66,7 @@
   padding: 0 var(--gutter-xs);
   background-color: var(--color-white);
   font-weight: bold;
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-x3l);
   transform: translateX(-50%);
   transition: background-color .3s;
 }
@@ -80,7 +80,7 @@
   }
 }
 .links {
-  margin-top: 10rem;
+  margin-top: 100px;
   text-align: center;
 
   @media (max-width: 566px) {

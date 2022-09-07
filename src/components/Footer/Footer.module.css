@@ -4,7 +4,7 @@
   align-items: center;
   max-width: var(--container-width-l);
   margin: 0 auto;
-  padding: 6rem var(--gutter-xs) 3rem;
+  padding: 60px var(--gutter-xs) 30px;
   border-top: var(--color-black) dashed 2px;
   transition: border-top .3s;
 }
