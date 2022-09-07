@@ -2,8 +2,9 @@
 .instagram-media {
   margin: var(--gutter-l) auto 0 !important;
 }
-.gatsby-resp-iframe-wrapper {
-  @media (max-width: 566px) {
+
+@media (max-width: 566px) {
+  .gatsby-resp-iframe-wrapper {
     margin: 0 calc(-1 * var(--gutter-xs)) !important;
   }
 }

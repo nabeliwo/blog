@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { Layout } from '../components/Layout'
-import classes from '../styles/pages/404.module.css'
+import * as classes from '../styles/pages/404.module.css'
 
 const NotFound = () => (
   <Layout

@@ -1,11 +1,15 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps, FC, ReactNode } from 'react'
 
 import { Head } from '../Head'
 import { Header } from '../Header'
 import { Footer } from '../Footer'
-import classes from './Layout.module.css'
+import * as classes from './Layout.module.css'
 
-export const Layout: FC<ComponentProps<typeof Head>> = ({ children, isBlogPost, ...props }) => {
+type Props = {
+  children: ReactNode
+} & ComponentProps<typeof Head>
+
+export const Layout: FC<Props> = ({ children, isBlogPost, ...props }) => {
   return (
     <>
       <Head {...props} />

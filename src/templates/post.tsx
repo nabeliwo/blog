@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout'
 import { Time } from '../components/Time'
 import { PostHTML } from '../components/PostHTML'
 import { Tags } from '../components/Tags'
-import classes from '../styles/pages/post.module.css'
+import * as classes from '../styles/pages/post.module.css'
 
 export const query = graphql`
   query Post($slug: String!) {

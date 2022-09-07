@@ -1,6 +1,6 @@
 import React from 'react'
 
-import classes from './Logo.module.css'
+import * as classes from './Logo.module.css'
 
 export const Logo = () => (
   <svg viewBox="0 0 369.77 59.82" width={300} className={classes.wrapper}>

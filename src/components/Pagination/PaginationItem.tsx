@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import classNames from 'classnames/bind'
 import { Link } from 'gatsby'
 
-import classes from './Pagination.module.css'
+import * as classes from './Pagination.module.css'
 
 const cx = classNames.bind(classes)
 

@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { PaginationItem } from './PaginationItem'
 import { PaginationControllerItem } from './PaginationControllerItem'
 
-import classes from './Pagination.module.css'
+import * as classes from './Pagination.module.css'
 
 interface Props {
   totalPages: number

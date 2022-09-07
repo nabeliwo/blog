@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { Link } from 'gatsby'
 
 import { Logo } from '../Logo'
-import classes from './Header.module.css'
+import * as classes from './Header.module.css'
 
 type Props = {
   isBlogPost?: boolean

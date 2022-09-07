@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import classes from './PostHTML.module.css'
+import * as classes from './PostHTML.module.css'
 
 type Props = {
   html: string

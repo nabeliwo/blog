@@ -4,7 +4,7 @@ import { Link, PageProps, graphql } from 'gatsby'
 import { Layout } from '../components/Layout'
 import { Time } from '../components/Time'
 import { getTagLabel } from '../components/Tags'
-import classes from '../styles/pages/tagPosts.module.css'
+import * as classes from '../styles/pages/tagPosts.module.css'
 
 export const query = graphql`
   query TagPosts($tag: String) {

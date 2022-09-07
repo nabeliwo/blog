@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { FiGithub, FiInstagram, FiRss, FiTwitter } from 'react-icons/fi'
 
 import { useModeToggle } from '../../hooks/useModeToggle'
-import classes from './Footer.module.css'
+import * as classes from './Footer.module.css'
 
 const query = graphql`
   query Footer {

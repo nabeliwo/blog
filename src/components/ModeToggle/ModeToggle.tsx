@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { HiOutlineSun } from 'react-icons/hi'
 import { BiMoon } from 'react-icons/bi'
 
-import classes from './ModeToggle.module.css'
+import * as classes from './ModeToggle.module.css'
 
 type Props = {
   checked: boolean

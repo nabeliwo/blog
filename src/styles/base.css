@@ -6,25 +6,26 @@ body {
   word-wrap: break-word;
   font-family: system-ui, sans-serif;
   transition: background-color .3s, color .3s;
-
-  @media (prefers-color-scheme: light) {
+}
+@media (prefers-color-scheme: light) {
+  body {
     background-color: var(--color-white);
     color: var(--color-black);
   }
-
-  @media (prefers-color-scheme: dark) {
+}
+@media (prefers-color-scheme: dark) {
+  body {
     background-color: var(--color-black);
     color: var(--color-white);
   }
-
-  &.lightMode {
-    background-color: var(--color-white);
-    color: var(--color-black);
-  }
-  &.darkMode {
-    background-color: var(--color-black);
-    color: var(--color-white);
-  }
+}
+body.lightMode {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+body.darkMode {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 a {
   color: inherit;
