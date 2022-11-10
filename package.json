@@ -31,7 +31,7 @@
     "gatsby-plugin-google-gtag": "^4.22.0",
     "gatsby-plugin-postcss": "^5.22.0",
     "gatsby-plugin-react-helmet": "^5.22.0",
-    "gatsby-plugin-sharp": "^4.22.0",
+    "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-plugin-twitter": "^4.22.0",
     "gatsby-plugin-typegen": "^3.0.0",
     "gatsby-remark-embed-youtube": "^0.0.7",
