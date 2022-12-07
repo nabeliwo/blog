@@ -19,6 +19,8 @@ const tagMap: { [key: string]: string } = {
   design: 'デザイン',
 
   'web-components': 'Web Components',
+
+  splatoon: 'スプラトゥーン',
 }
 
 export const getTagLabel = (key: string) => {
