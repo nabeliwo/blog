@@ -1,9 +1,8 @@
 import React, { FC } from 'react'
 
-import { PaginationItem } from './PaginationItem'
-import { PaginationControllerItem } from './PaginationControllerItem'
-
 import * as classes from './Pagination.module.css'
+import { PaginationControllerItem } from './PaginationControllerItem'
+import { PaginationItem } from './PaginationItem'
 
 interface Props {
   totalPages: number

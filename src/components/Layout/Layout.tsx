@@ -1,8 +1,9 @@
 import React, { ComponentProps, FC, ReactNode } from 'react'
 
+import { Footer } from '../Footer'
 import { Head } from '../Head'
 import { Header } from '../Header'
-import { Footer } from '../Footer'
+
 import * as classes from './Layout.module.css'
 
 type Props = {

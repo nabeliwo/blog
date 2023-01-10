@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-import { useLocalStorage } from './useLocalStorage'
 import { ModeToggle } from '../components/ModeToggle'
+
+import { useLocalStorage } from './useLocalStorage'
 
 export const useModeToggle = () => {
   const { storedValue, setValue } = useLocalStorage(

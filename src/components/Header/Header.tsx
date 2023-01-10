@@ -1,7 +1,8 @@
-import React, { FC } from 'react'
 import { Link } from 'gatsby'
+import React, { FC } from 'react'
 
 import { Logo } from '../Logo'
+
 import * as classes from './Header.module.css'
 
 type Props = {

@@ -1,8 +1,9 @@
-import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
 import { FiGithub, FiInstagram, FiRss, FiTwitter } from 'react-icons/fi'
 
 import { useModeToggle } from '../../hooks/useModeToggle'
+
 import * as classes from './Footer.module.css'
 
 const query = graphql`

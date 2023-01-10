@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
 import { Link } from 'gatsby'
+import React, { FC } from 'react'
 
-import { getTagLabel } from './getTagLabel'
 import * as classes from './Tags.module.css'
+import { getTagLabel } from './getTagLabel'
 
 type Props = {
   tags: GatsbyTypes.Maybe<ReadonlyArray<GatsbyTypes.Maybe<string>>>

@@ -1,15 +1,15 @@
-import React, { FC } from 'react'
 import { Link, PageProps, graphql } from 'gatsby'
+import React, { FC } from 'react'
 
 import { Layout } from '../components/Layout'
-import { Time } from '../components/Time'
-import { Tags } from '../components/Tags'
 import { Pagination } from '../components/Pagination'
+import { Tags } from '../components/Tags'
+import { Time } from '../components/Time'
 import * as classes from '../styles/pages/index.module.css'
 
 export const query = graphql`
   query AllPosts($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, skip: $skip, limit: $limit) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, skip: $skip, limit: $limit) {
       edges {
         node {
           id

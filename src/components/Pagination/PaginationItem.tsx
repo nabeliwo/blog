@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
 import classNames from 'classnames/bind'
 import { Link } from 'gatsby'
+import React, { FC } from 'react'
 
 import * as classes from './Pagination.module.css'
 

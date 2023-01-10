@@ -1,14 +1,14 @@
-import React, { FC } from 'react'
 import { Link, PageProps, graphql } from 'gatsby'
+import React, { FC } from 'react'
 
 import { Layout } from '../components/Layout'
-import { Time } from '../components/Time'
 import { getTagLabel } from '../components/Tags'
+import { Time } from '../components/Time'
 import * as classes from '../styles/pages/tagPosts.module.css'
 
 export const query = graphql`
   query TagPosts($tag: String) {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
       totalCount
       edges {
         node {

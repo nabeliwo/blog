@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import React, { FC } from 'react'
 import { Helmet } from 'react-helmet'
 
 const query = graphql`

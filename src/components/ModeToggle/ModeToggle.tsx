@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react'
-import { HiOutlineSun } from 'react-icons/hi'
 import { BiMoon } from 'react-icons/bi'
+import { HiOutlineSun } from 'react-icons/hi'
 
 import * as classes from './ModeToggle.module.css'
 

@@ -1,12 +1,12 @@
-import React, { FC } from 'react'
 import { Link, PageProps, graphql } from 'gatsby'
-import { SiHatenabookmark } from 'react-icons/si'
+import React, { FC } from 'react'
 import { FiFacebook, FiPocket, FiTwitter } from 'react-icons/fi'
+import { SiHatenabookmark } from 'react-icons/si'
 
 import { Layout } from '../components/Layout'
-import { Time } from '../components/Time'
 import { PostHTML } from '../components/PostHTML'
 import { Tags } from '../components/Tags'
+import { Time } from '../components/Time'
 import * as classes from '../styles/pages/post.module.css'
 
 export const query = graphql`

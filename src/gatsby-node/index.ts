@@ -1,7 +1,8 @@
 import path from 'path'
+
 import { GatsbyNode } from 'gatsby'
-import { createFilePath } from 'gatsby-source-filesystem'
 import { paginate } from 'gatsby-awesome-pagination'
+import { createFilePath } from 'gatsby-source-filesystem'
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -23,8 +24,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
     posts: Pick<GatsbyTypes.Query['allMarkdownRemark'], 'edges'>
     tagsGroup: Pick<GatsbyTypes.Query['allMarkdownRemark'], 'group'>
   }>(`
-    query {
-      posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    {
+      posts: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             fields {
@@ -37,7 +38,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
         }
       }
       tagsGroup: allMarkdownRemark {
-        group(field: frontmatter___tags) {
+        group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
         }
       }
