@@ -8,8 +8,10 @@
   border-top: var(--color-black) dashed 2px;
   transition: border-top .3s;
 }
-body:global(.darkMode) .wrapper {
-  border-top-color: var(--color-white);
+@media (prefers-color-scheme: dark) {
+  .wrapper {
+    border-top-color: var(--color-white);
+  }
 }
 .about {
   margin-bottom: var(--gutter-s);
@@ -34,8 +36,6 @@ body:global(.darkMode) .wrapper {
 }
 .socialLink {
   display: inline-block;
-}
-.mode {
   margin-bottom: var(--gutter-l);
 }
 .copyright {

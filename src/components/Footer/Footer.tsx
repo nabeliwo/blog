@@ -2,8 +2,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { FiGithub, FiInstagram, FiRss, FiTwitter } from 'react-icons/fi'
 
-import { useModeToggle } from '../../hooks/useModeToggle'
-
 import * as classes from './Footer.module.css'
 
 const query = graphql`
@@ -27,7 +25,6 @@ const query = graphql`
 `
 
 export const Footer = () => {
-  const { element } = useModeToggle()
   const data = useStaticQuery<GatsbyTypes.FooterQuery>(query)
   const social = data.site?.siteMetadata?.social
 
@@ -61,8 +58,6 @@ export const Footer = () => {
           </a>
         </li>
       </ul>
-
-      <div className={classes.mode}>{element}</div>
 
       <p className={classes.copyright}>© 2019 nabeliwo.com</p>
     </footer>

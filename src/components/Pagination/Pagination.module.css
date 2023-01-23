@@ -55,16 +55,18 @@
     pointer-events: none;
   }
 }
-body:global(.darkMode) .item {
-  border-color: var(--color-white);
-
-  &.active {
-    background-color: var(--color-white);
-    color: var(--color-black);
-  }
-  &.disabled {
-    border-color: var(--color-dark-gray);
-    background-color: var(--color-dark-gray);
-    color: var(--color-light-gray);
+@media (prefers-color-scheme: dark) {
+  .item {
+    border-color: var(--color-white);
+  
+    &.active {
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+    &.disabled {
+      border-color: var(--color-dark-gray);
+      background-color: var(--color-dark-gray);
+      color: var(--color-light-gray);
+    }
   }
 }

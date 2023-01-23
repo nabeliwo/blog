@@ -16,14 +16,6 @@ body {
     color: var(--color-white);
   }
 }
-body.lightMode {
-  background-color: var(--color-white);
-  color: var(--color-black);
-}
-body.darkMode {
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
 a {
   color: inherit;
   text-decoration: none;

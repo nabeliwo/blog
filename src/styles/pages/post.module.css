@@ -114,14 +114,15 @@
     margin-top: var(--gutter-xs);
   }
 }
-body:global(.darkMode) {
-  & .title {
+@media (prefers-color-scheme: dark) {
+  .title {
     border-bottom-color: var(--color-white);
   }
-  & .shareInner {
+  .shareInner {
     border-color: var(--color-whitek);
   }
-  & .shareTitle {
+  .shareTitle {
     background-color: var(--color-black);
   }
 }
+

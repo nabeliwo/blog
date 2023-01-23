@@ -156,16 +156,18 @@
     }
   }
 }
-body:global(.darkMode) .wrapper {
-  & h3::before {
-    background-color: var(--color-white);
-  }
-  & table th,
-  & table td {
-    border-color: var(--color-white);
-  }
-  & hr {
-    border-color: var(--color-white);
+@media (prefers-color-scheme: dark) {
+  .wrapper {
+    & h3::before {
+      background-color: var(--color-white);
+    }
+    & table th,
+    & table td {
+      border-color: var(--color-white);
+    }
+    & hr {
+      border-color: var(--color-white);
+    }
   }
 }
 span:global(.gatsby-resp-image-wrapper) {
