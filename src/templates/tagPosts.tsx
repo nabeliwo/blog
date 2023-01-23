@@ -34,12 +34,13 @@ type Props = PageProps<GatsbyTypes.TagPostsQuery> & {
 
 const TagPosts: FC<Props> = ({ data, pageContext }) => {
   const { edges, totalCount } = data.allMarkdownRemark
+  const label = getTagLabel(pageContext.tag)
 
   return (
-    <Layout>
+    <Layout title={`${label}の記事一覧`} description={`${label}について書かれた記事の一覧です。`}>
       <div className={classes.wrapper}>
         <p className={classes.description}>
-          # {getTagLabel(pageContext.tag)} のタグがついた記事は{totalCount}件あります。
+          # {label} のタグがついた記事は{totalCount}件あります。
         </p>
 
         <section>
