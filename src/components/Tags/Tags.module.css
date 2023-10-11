@@ -1,0 +1,6 @@
+.item {
+  display: inline-block;
+  margin: 0 var(--gutter-xxs);
+  font-size: var(--font-size-s);
+  text-decoration: underline;
+}

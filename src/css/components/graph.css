@@ -1,7 +1,0 @@
-.c-graph {
-  background-color: var(--color-bg);
-  background-repeat: repeat;
-  background-image: -webkit-linear-gradient(transparent 94%, #ccc 50%,  var(--color-gray-light)),
-                    -webkit-linear-gradient(0deg, transparent 94%, #ccc 50%, var(--color-gray-light));
-  background-size: 10px 10px;
-}

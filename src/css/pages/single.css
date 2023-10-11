@@ -1,5 +1,0 @@
-.p-single__head { margin-bottom: 100px; }
-
-@media (--mobile) {
-  .p-single__head { margin-bottom: 40px; }
-}

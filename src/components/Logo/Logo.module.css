@@ -1,0 +1,7 @@
+.wrapper {
+  fill: var(--color-primary);
+
+  @media (max-width: 566px) {
+    width: 260px;
+  }
+}

@@ -1,0 +1,38 @@
+.wrapper {
+  padding: var(--gutter-xxl) 0;
+  font-size: var(--font-size-s);
+  text-align: center;
+
+  @media (max-width: 566px) {
+    padding: 0 var(--gutter-xs);
+    text-align: left;
+  }
+}
+.head {
+  margin-bottom: var(--gutter-xxl);
+
+  @media (max-width: 566px) {
+    margin-bottom: var(--gutter-xl);
+  }
+}
+.title {
+  margin-bottom: var(--gutter-s);
+  font-size: var(--font-size-x3l);
+
+  @media (max-width: 566px) {
+    margin-bottom: var(--gutter-xs);
+  }
+}
+.description {
+  margin-bottom: var(--gutter-s);
+  font-size: var(--font-size-m);
+  line-height: 1.6;
+
+  @media (max-width: 566px) {
+    margin-bottom: var(--gutter-xs);
+  }
+}
+.link {
+  font-size: var(--font-size-m);
+  text-decoration: underline;
+}
