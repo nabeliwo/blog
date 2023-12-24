@@ -22,6 +22,7 @@ const tagMap: { [key: string]: string } = {
 
   splatoon: 'スプラトゥーン',
   'blue-protocol': 'BLUE PROTOCOL',
+  zelda: 'ゼルダの伝説',
 }
 
 export const getTagLabel = (key: string) => {

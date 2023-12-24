@@ -2,7 +2,7 @@
 title: "『ゼルダの伝説 ティアーズ オブ ザ キングダム』をやった"
 description: "待ちに待ったゼルダの新作は神ゲーでした。"
 date: "2023-05-22"
-tags: ["game"]
+tags: ["game", "zelda"]
 image: ""
 ---
 
