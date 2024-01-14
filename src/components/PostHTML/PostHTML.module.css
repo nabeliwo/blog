@@ -116,6 +116,10 @@
     margin-top: 0;
   }
 
+  & summary {
+    line-height: 1.65;
+  }
+
   @media (max-width: 566px) {
     & h2 {
       margin: 70px 0 30px;
